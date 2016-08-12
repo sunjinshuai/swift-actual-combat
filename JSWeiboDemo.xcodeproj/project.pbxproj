@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F77B1D5E223D00F14FB3 /* DiscoverViewController.swift */; };
+		3284F77E1D5E226000F14FB3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F77D1D5E226000F14FB3 /* HomeViewController.swift */; };
+		3284F7801D5E227D00F14FB3 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F77F1D5E227D00F14FB3 /* MessageViewController.swift */; };
+		3284F7821D5E229500F14FB3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7811D5E229500F14FB3 /* ProfileViewController.swift */; };
+		3284F7881D5E238B00F14FB3 /* WBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7871D5E238B00F14FB3 /* WBTabBarController.swift */; };
+		3284F78A1D5E23A500F14FB3 /* WBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */; };
 		32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84D91D5E18C600B0B698 /* AppDelegate.swift */; };
 		32FA84E11D5E18C600B0B698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32FA84E01D5E18C600B0B698 /* Assets.xcassets */; };
 		32FA84EF1D5E18C600B0B698 /* JSWeiboDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84EE1D5E18C600B0B698 /* JSWeiboDemoTests.swift */; };
@@ -31,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3284F77B1D5E223D00F14FB3 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		3284F77D1D5E226000F14FB3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3284F77F1D5E227D00F14FB3 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		3284F7811D5E229500F14FB3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3284F7871D5E238B00F14FB3 /* WBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarController.swift; sourceTree = "<group>"; };
+		3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationController.swift; sourceTree = "<group>"; };
 		32FA84D61D5E18C600B0B698 /* JSWeiboDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSWeiboDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FA84D91D5E18C600B0B698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32FA84E01D5E18C600B0B698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +80,219 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3284F7651D5E217800F14FB3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3284F7661D5E217800F14FB3 /* Discover */,
+				3284F76B1D5E217800F14FB3 /* Home */,
+				3284F7701D5E217800F14FB3 /* Main */,
+				3284F7711D5E217800F14FB3 /* Message */,
+				3284F7761D5E217800F14FB3 /* Profile */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3284F7661D5E217800F14FB3 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				3284F7691D5E217800F14FB3 /* View(视图和控制器) */,
+				3284F76A1D5E217800F14FB3 /* ViewModel(视图模型) */,
+				3284F7671D5E217800F14FB3 /* Model(模型) */,
+				3284F7681D5E217800F14FB3 /* Tools(工具) */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		3284F7671D5E217800F14FB3 /* Model(模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model(模型)";
+			sourceTree = "<group>";
+		};
+		3284F7681D5E217800F14FB3 /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		3284F7691D5E217800F14FB3 /* View(视图和控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				3284F77B1D5E223D00F14FB3 /* DiscoverViewController.swift */,
+			);
+			path = "View(视图和控制器)";
+			sourceTree = "<group>";
+		};
+		3284F76A1D5E217800F14FB3 /* ViewModel(视图模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ViewModel(视图模型)";
+			sourceTree = "<group>";
+		};
+		3284F76B1D5E217800F14FB3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3284F76E1D5E217800F14FB3 /* View(视图和控制器) */,
+				3284F76F1D5E217800F14FB3 /* ViewModel(视图模型) */,
+				3284F76C1D5E217800F14FB3 /* Model(模型) */,
+				3284F76D1D5E217800F14FB3 /* Tools(工具) */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3284F76C1D5E217800F14FB3 /* Model(模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model(模型)";
+			sourceTree = "<group>";
+		};
+		3284F76D1D5E217800F14FB3 /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		3284F76E1D5E217800F14FB3 /* View(视图和控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				3284F77D1D5E226000F14FB3 /* HomeViewController.swift */,
+			);
+			path = "View(视图和控制器)";
+			sourceTree = "<group>";
+		};
+		3284F76F1D5E217800F14FB3 /* ViewModel(视图模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ViewModel(视图模型)";
+			sourceTree = "<group>";
+		};
+		3284F7701D5E217800F14FB3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3284F7841D5E236800F14FB3 /* Controller */,
+				3284F7831D5E236800F14FB3 /* Category */,
+				3284F7851D5E236800F14FB3 /* Lib */,
+				3284F7861D5E236800F14FB3 /* Tools */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3284F7711D5E217800F14FB3 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3284F7741D5E217800F14FB3 /* View(视图和控制器) */,
+				3284F7751D5E217800F14FB3 /* ViewModel(视图模型) */,
+				3284F7721D5E217800F14FB3 /* Model(模型) */,
+				3284F7731D5E217800F14FB3 /* Tools(工具) */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		3284F7721D5E217800F14FB3 /* Model(模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model(模型)";
+			sourceTree = "<group>";
+		};
+		3284F7731D5E217800F14FB3 /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		3284F7741D5E217800F14FB3 /* View(视图和控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				3284F77F1D5E227D00F14FB3 /* MessageViewController.swift */,
+			);
+			path = "View(视图和控制器)";
+			sourceTree = "<group>";
+		};
+		3284F7751D5E217800F14FB3 /* ViewModel(视图模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ViewModel(视图模型)";
+			sourceTree = "<group>";
+		};
+		3284F7761D5E217800F14FB3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3284F7791D5E217800F14FB3 /* View(视图和控制器) */,
+				3284F77A1D5E217800F14FB3 /* ViewModel(视图模型) */,
+				3284F7771D5E217800F14FB3 /* Model(模型) */,
+				3284F7781D5E217800F14FB3 /* Tools(工具) */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3284F7771D5E217800F14FB3 /* Model(模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model(模型)";
+			sourceTree = "<group>";
+		};
+		3284F7781D5E217800F14FB3 /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		3284F7791D5E217800F14FB3 /* View(视图和控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				3284F7811D5E229500F14FB3 /* ProfileViewController.swift */,
+			);
+			path = "View(视图和控制器)";
+			sourceTree = "<group>";
+		};
+		3284F77A1D5E217800F14FB3 /* ViewModel(视图模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ViewModel(视图模型)";
+			sourceTree = "<group>";
+		};
+		3284F7831D5E236800F14FB3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3284F7841D5E236800F14FB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3284F7871D5E238B00F14FB3 /* WBTabBarController.swift */,
+				3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3284F7851D5E236800F14FB3 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		3284F7861D5E236800F14FB3 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		32FA84CD1D5E18C600B0B698 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +316,7 @@
 		32FA84D81D5E18C600B0B698 /* JSWeiboDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3284F7651D5E217800F14FB3 /* Classes */,
 				32FA84D91D5E18C600B0B698 /* AppDelegate.swift */,
 				32FA84E01D5E18C600B0B698 /* Assets.xcassets */,
 				32FA84E51D5E18C600B0B698 /* Info.plist */,
@@ -246,6 +472,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */,
+				3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */,
+				3284F7881D5E238B00F14FB3 /* WBTabBarController.swift in Sources */,
+				3284F78A1D5E23A500F14FB3 /* WBNavigationController.swift in Sources */,
+				3284F7821D5E229500F14FB3 /* ProfileViewController.swift in Sources */,
+				3284F7801D5E227D00F14FB3 /* MessageViewController.swift in Sources */,
+				3284F77E1D5E226000F14FB3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +609,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.51fanxing.JSWeiboDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -391,6 +624,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.51fanxing.JSWeiboDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -16,8 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        sleep(3)
+        window = UIWindow()
+        window?.backgroundColor = UIColor.blackColor()
+        window?.rootViewController = WBTabBarController()
+        window?.makeKeyAndVisible()
         return true
     }
 
