@@ -13,8 +13,8 @@
 		3284F7821D5E229500F14FB3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7811D5E229500F14FB3 /* ProfileViewController.swift */; };
 		3284F7881D5E238B00F14FB3 /* WBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7871D5E238B00F14FB3 /* WBTabBarController.swift */; };
 		3284F78A1D5E23A500F14FB3 /* WBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */; };
+		3284F78C1D5E24E500F14FB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3284F78B1D5E24E500F14FB3 /* Images.xcassets */; };
 		32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84D91D5E18C600B0B698 /* AppDelegate.swift */; };
-		32FA84E11D5E18C600B0B698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32FA84E01D5E18C600B0B698 /* Assets.xcassets */; };
 		32FA84EF1D5E18C600B0B698 /* JSWeiboDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84EE1D5E18C600B0B698 /* JSWeiboDemoTests.swift */; };
 		32FA84FA1D5E18C600B0B698 /* JSWeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84F91D5E18C600B0B698 /* JSWeiboDemoUITests.swift */; };
 /* End PBXBuildFile section */
@@ -43,9 +43,9 @@
 		3284F7811D5E229500F14FB3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3284F7871D5E238B00F14FB3 /* WBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarController.swift; sourceTree = "<group>"; };
 		3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationController.swift; sourceTree = "<group>"; };
+		3284F78B1D5E24E500F14FB3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32FA84D61D5E18C600B0B698 /* JSWeiboDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSWeiboDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FA84D91D5E18C600B0B698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		32FA84E01D5E18C600B0B698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32FA84E51D5E18C600B0B698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32FA84EA1D5E18C600B0B698 /* JSWeiboDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSWeiboDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FA84EE1D5E18C600B0B698 /* JSWeiboDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSWeiboDemoTests.swift; sourceTree = "<group>"; };
@@ -318,8 +318,8 @@
 			children = (
 				3284F7651D5E217800F14FB3 /* Classes */,
 				32FA84D91D5E18C600B0B698 /* AppDelegate.swift */,
-				32FA84E01D5E18C600B0B698 /* Assets.xcassets */,
 				32FA84E51D5E18C600B0B698 /* Info.plist */,
+				3284F78B1D5E24E500F14FB3 /* Images.xcassets */,
 			);
 			path = JSWeiboDemo;
 			sourceTree = "<group>";
@@ -446,7 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32FA84E11D5E18C600B0B698 /* Assets.xcassets in Resources */,
+				3284F78C1D5E24E500F14FB3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
