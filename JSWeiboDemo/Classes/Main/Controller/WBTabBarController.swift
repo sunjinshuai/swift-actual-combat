@@ -10,4 +10,8 @@ import UIKit
 
 class WBTabBarController: UITabBarController {
 
+    // MARK: - 私有控件 撰写按钮
+    fileprivate lazy var composeBtn : UIButton = UIButton.yw_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
+    
+    
 }
