@@ -17,6 +17,8 @@
 		32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84D91D5E18C600B0B698 /* AppDelegate.swift */; };
 		32FA84EF1D5E18C600B0B698 /* JSWeiboDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84EE1D5E18C600B0B698 /* JSWeiboDemoTests.swift */; };
 		32FA84FA1D5E18C600B0B698 /* JSWeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84F91D5E18C600B0B698 /* JSWeiboDemoUITests.swift */; };
+		4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */; };
+		4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		32FA84F51D5E18C600B0B698 /* JSWeiboDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSWeiboDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FA84F91D5E18C600B0B698 /* JSWeiboDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSWeiboDemoUITests.swift; sourceTree = "<group>"; };
 		32FA84FB1D5E18C600B0B698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
+		4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		3284F7651D5E217800F14FB3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4C99DCEB1E5B3CE800D9C0A0 /* Public */,
 				3284F7661D5E217800F14FB3 /* Discover */,
 				3284F76B1D5E217800F14FB3 /* Home */,
 				3284F7701D5E217800F14FB3 /* Main */,
@@ -175,10 +180,8 @@
 		3284F7701D5E217800F14FB3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4C99DCE81E5B3C1300D9C0A0 /* View */,
 				3284F7841D5E236800F14FB3 /* Controller */,
-				3284F7831D5E236800F14FB3 /* Category */,
-				3284F7851D5E236800F14FB3 /* Lib */,
-				3284F7861D5E236800F14FB3 /* Tools */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -263,13 +266,6 @@
 			path = "ViewModel(视图模型)";
 			sourceTree = "<group>";
 		};
-		3284F7831D5E236800F14FB3 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		3284F7841D5E236800F14FB3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,20 +273,6 @@
 				3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		3284F7851D5E236800F14FB3 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		3284F7861D5E236800F14FB3 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		32FA84CD1D5E18C600B0B698 = {
@@ -340,6 +322,30 @@
 				32FA84FB1D5E18C600B0B698 /* Info.plist */,
 			);
 			path = JSWeiboDemoUITests;
+			sourceTree = "<group>";
+		};
+		4C99DCE81E5B3C1300D9C0A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C99DCEB1E5B3CE800D9C0A0 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				4C99DCEC1E5B3CF800D9C0A0 /* Constant */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		4C99DCEC1E5B3CF800D9C0A0 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,10 +482,12 @@
 			files = (
 				32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */,
 				3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */,
+				4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */,
 				3284F7881D5E238B00F14FB3 /* WBTabBarController.swift in Sources */,
 				3284F78A1D5E23A500F14FB3 /* WBNavigationController.swift in Sources */,
 				3284F7821D5E229500F14FB3 /* ProfileViewController.swift in Sources */,
 				3284F7801D5E227D00F14FB3 /* MessageViewController.swift in Sources */,
+				4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */,
 				3284F77E1D5E226000F14FB3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
