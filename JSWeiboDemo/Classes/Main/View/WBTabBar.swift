@@ -24,7 +24,7 @@ class WBTabBar: UITabBar {
         
         let width = WBSCREENWIDTH * 0.2
         var index: CGFloat = 0
-        
+    
         for view in subviews {
             if view.isKind(of: NSClassFromString("UITabBarButton")!) {
                 view.frame.size.width = width
