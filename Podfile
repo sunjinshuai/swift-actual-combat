@@ -10,5 +10,6 @@ target 'JSWeiboDemo' do
     pod 'SDWebImage'
     pod 'SVProgressHUD'
     pod 'pop'
+    pod 'SnapKit', '~> 3.2.0'
     
 end
