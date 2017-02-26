@@ -48,6 +48,6 @@ extension WBTabBarController {
         childController.tabBarItem.image = UIImage(named: imgName)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         childController.tabBarItem.selectedImage = UIImage(named: "\(imgName)_selected")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         // 添加子控制器
-        addChildViewController(UINavigationController(rootViewController: childController))
+        addChildViewController(WBNavigationController(rootViewController: childController))
     }
 }

@@ -12,7 +12,10 @@ class WBNavigationController: UINavigationController, UIGestureRecognizerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         // 当自定义导航左侧按钮后 点击屏幕左侧不能返回的bug 解决方法
-        interactivePopGestureRecognizer?.delegate = self
+//        interactivePopGestureRecognizer?.delegate = self
+        
+        
+        navigationBar.isHidden = true
     }
     // 将要接受手势点击
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {

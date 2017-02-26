@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MessageViewController: UIViewController {
+class MessageViewController: WBBaseViewController {
 
 }
