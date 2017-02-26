@@ -27,6 +27,7 @@ class WBVisitorViewController: UIViewController {
         setupNav()
         visitorView = WBVisitorView()
 
+        view = visitorView
     }
     
     // 设置导航

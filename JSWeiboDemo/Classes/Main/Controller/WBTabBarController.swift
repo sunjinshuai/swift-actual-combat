@@ -14,6 +14,12 @@ class WBTabBarController: UITabBarController {
         super.viewDidLoad()
         // 实例化自定义tabBar
         let tabBar = WBTabBar()
+        
+        tabBar.closure = {
+            
+            let compose = WBNavigationController(rootViewController: WBComposeViewController())
+            self.present(compose, animated: true, completion: nil)
+        }
 
         // 通过kvc 给只读属性赋值
         setValue(tabBar, forKey: "tabBar")

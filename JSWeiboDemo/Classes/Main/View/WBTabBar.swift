@@ -10,6 +10,8 @@ import UIKit
 
 class WBTabBar: UITabBar {
     
+    var closure:(()->())?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupTabBarComposeButton()
@@ -48,7 +50,7 @@ class WBTabBar: UITabBar {
     
     // MARK: - 监听事件
     @objc private func buttonClick(){
-        print("按钮点击")
+        closure?()
     }
     
     // MARK: - 懒加载控件
