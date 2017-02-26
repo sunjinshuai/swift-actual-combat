@@ -8,6 +8,35 @@
 
 import UIKit
 
-class WBNavigationController: UINavigationController {
-
+class WBNavigationController: UINavigationController, UIGestureRecognizerDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 当自定义导航左侧按钮后 点击屏幕左侧不能返回的bug 解决方法
+        interactivePopGestureRecognizer?.delegate = self
+    }
+    // 将要接受手势点击
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        return childViewControllers.count != 1
+    }
+    
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        
+        if childViewControllers.count > 0 {
+            var title = "返回"
+            if childViewControllers.count == 1 {
+                title = childViewControllers.first?.title ?? ""
+                // 隐藏
+                viewController.hidesBottomBarWhenPushed = true
+                
+            }
+ 
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_back_withtext", title: title, target: self, action: #selector(leftClick))
+        }
+        super.pushViewController(viewController, animated: animated)
+    }
+    
+    // MARK: - 监听事件
+    @objc private func leftClick(){
+        _ = popViewController(animated: true)
+    }
 }
