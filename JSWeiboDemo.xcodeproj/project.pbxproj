@@ -20,6 +20,10 @@
 		4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */; };
 		4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */; };
 		4CDDAC731E6278E500868E4A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */; };
+		4CDDAC771E627ED100868E4A /* WBVisitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC761E627ED100868E4A /* WBVisitorViewController.swift */; };
+		4CDDAC791E627F2E00868E4A /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC781E627F2E00868E4A /* WBVisitorView.swift */; };
+		4CDDAC7B1E62814C00868E4A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC7A1E62814C00868E4A /* UIImageView+Extension.swift */; };
+		4CDDAC7D1E6282B700868E4A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC7C1E6282B700868E4A /* UILabel+Extension.swift */; };
 		F9560E5FDCB91D66A3654B14 /* Pods_JSWeiboDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A3BA8CD604002EE3246FDF /* Pods_JSWeiboDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
 		4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		4CDDAC761E627ED100868E4A /* WBVisitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorViewController.swift; sourceTree = "<group>"; };
+		4CDDAC781E627F2E00868E4A /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
+		4CDDAC7A1E62814C00868E4A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		4CDDAC7C1E6282B700868E4A /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		637CB2ADA21B8E606826A9F7 /* Pods-JSWeiboDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSWeiboDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSWeiboDemo/Pods-JSWeiboDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +286,7 @@
 			children = (
 				3284F7871D5E238B00F14FB3 /* WBTabBarController.swift */,
 				3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */,
+				4CDDAC761E627ED100868E4A /* WBVisitorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */,
+				4CDDAC781E627F2E00868E4A /* WBVisitorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */,
+				4CDDAC7A1E62814C00868E4A /* UIImageView+Extension.swift */,
+				4CDDAC7C1E6282B700868E4A /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -568,12 +580,16 @@
 			files = (
 				32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */,
 				3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */,
+				4CDDAC7B1E62814C00868E4A /* UIImageView+Extension.swift in Sources */,
+				4CDDAC791E627F2E00868E4A /* WBVisitorView.swift in Sources */,
 				4CDDAC731E6278E500868E4A /* UIBarButtonItem+Extension.swift in Sources */,
 				4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */,
 				3284F7881D5E238B00F14FB3 /* WBTabBarController.swift in Sources */,
 				3284F78A1D5E23A500F14FB3 /* WBNavigationController.swift in Sources */,
 				3284F7821D5E229500F14FB3 /* ProfileViewController.swift in Sources */,
 				3284F7801D5E227D00F14FB3 /* MessageViewController.swift in Sources */,
+				4CDDAC7D1E6282B700868E4A /* UILabel+Extension.swift in Sources */,
+				4CDDAC771E627ED100868E4A /* WBVisitorViewController.swift in Sources */,
 				4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */,
 				3284F77E1D5E226000F14FB3 /* HomeViewController.swift in Sources */,
 			);

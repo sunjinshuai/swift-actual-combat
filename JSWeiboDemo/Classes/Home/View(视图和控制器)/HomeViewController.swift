@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     //MARK: - 设置导航
     private func setupNavigationItem() {
         // 左侧
-        navigationItem.leftBarButtonItem =  UIBarButtonItem(imgName: "navigationbar_friendsearch", target: self, action: #selector(leftClick))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_friendsearch", target: self, action: #selector(leftClick))
         // 右侧
         navigationItem.rightBarButtonItem = UIBarButtonItem(imgName: "navigationbar_pop", target: self, action: #selector(rightClick))
     }
