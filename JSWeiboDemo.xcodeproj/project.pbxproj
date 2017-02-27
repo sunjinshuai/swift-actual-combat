@@ -18,6 +18,7 @@
 		32FA84EF1D5E18C600B0B698 /* JSWeiboDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84EE1D5E18C600B0B698 /* JSWeiboDemoTests.swift */; };
 		32FA84FA1D5E18C600B0B698 /* JSWeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84F91D5E18C600B0B698 /* JSWeiboDemoUITests.swift */; };
 		4C689BA31E62BB2300B679D5 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689BA21E62BB2300B679D5 /* WBBaseViewController.swift */; };
+		4C689BA51E63097000B679D5 /* WBTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689BA41E63097000B679D5 /* WBTempViewController.swift */; };
 		4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */; };
 		4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */; };
 		4CDDAC731E6278E500868E4A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */; };
@@ -66,6 +67,7 @@
 		32FA84F91D5E18C600B0B698 /* JSWeiboDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSWeiboDemoUITests.swift; sourceTree = "<group>"; };
 		32FA84FB1D5E18C600B0B698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C689BA21E62BB2300B679D5 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
+		4C689BA41E63097000B679D5 /* WBTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTempViewController.swift; sourceTree = "<group>"; };
 		4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
 		4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */,
 				4CDDAC761E627ED100868E4A /* WBVisitorViewController.swift */,
 				4C689BA21E62BB2300B679D5 /* WBBaseViewController.swift */,
+				4C689BA41E63097000B679D5 /* WBTempViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C689BA51E63097000B679D5 /* WBTempViewController.swift in Sources */,
 				32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */,
 				3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */,
 				4CDDAC7B1E62814C00868E4A /* UIImageView+Extension.swift in Sources */,

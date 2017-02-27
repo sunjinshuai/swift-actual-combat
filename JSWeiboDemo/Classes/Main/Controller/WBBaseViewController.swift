@@ -32,5 +32,6 @@ extension WBBaseViewController {
         view.backgroundColor = UIColor.white
         view.addSubview(navigationBar)
         navigationBar.items = [navItem]
+        navigationBar.barTintColor = RGB(r: 249, g: 249, b: 249)
     }
 }

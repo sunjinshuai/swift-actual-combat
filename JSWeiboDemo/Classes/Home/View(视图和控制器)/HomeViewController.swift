@@ -33,10 +33,14 @@ extension HomeViewController {
     // 左侧按钮点击
     @objc fileprivate func leftClick(){
         print("左侧按钮点击")
+        
+        let temp = WBTempViewController()
+        self.navigationController?.pushViewController(temp, animated: true)
     }
     // 右侧按钮点击
     @objc fileprivate func rightClick(){
         print("右侧按钮点击")
-        
+        let temp = WBTempViewController()
+        self.navigationController?.pushViewController(temp, animated: true)
     }
 }
