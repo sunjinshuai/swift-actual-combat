@@ -10,6 +10,8 @@ import UIKit
 
 class WBBaseViewController: UIViewController {
     
+    var tableView: UITableView?
+    
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 64))
     lazy var navItem = UINavigationItem()
     
@@ -21,17 +23,36 @@ class WBBaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
+        
+        setupUI()
     }
 }
 
 extension WBBaseViewController {
 
-    func setupNavigationBar () {
-    
+    func setupUI() {
         view.backgroundColor = UIColor.white
+        
+        setupNavigationBar()
+        
+        setupTableView()
+    }
+    
+    /// 设置tableView
+    private func setupTableView() {
+    
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        
+        view.insertSubview(tableView!, belowSubview: navigationBar)
+    }
+    
+    /// 设置导航条
+    private func setupNavigationBar() {
         view.addSubview(navigationBar)
         navigationBar.items = [navItem]
+        // 设置导航条渲染的颜色
         navigationBar.barTintColor = RGB(r: 249, g: 249, b: 249)
+        // 设置导航条字体的颜色
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
     }
 }
