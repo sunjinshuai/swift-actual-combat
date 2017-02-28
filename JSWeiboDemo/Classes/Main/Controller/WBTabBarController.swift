@@ -32,6 +32,10 @@ class WBTabBarController: UITabBarController {
         // 我
         addChildViewController(ProfileViewController(), title: "我", imgName: "tabbar_profile")
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
 }
 
 // MARK: - 添加子控制器的公共方法时
