@@ -28,6 +28,7 @@ class WBBaseViewController: UIViewController {
     }
 }
 
+/// 设置UI
 extension WBBaseViewController {
 
     func setupUI() {
@@ -42,7 +43,8 @@ extension WBBaseViewController {
     private func setupTableView() {
     
         tableView = UITableView(frame: view.bounds, style: .plain)
-        
+        tableView?.delegate = self
+        tableView?.dataSource = self
         view.insertSubview(tableView!, belowSubview: navigationBar)
     }
     
@@ -54,5 +56,17 @@ extension WBBaseViewController {
         navigationBar.barTintColor = RGB(r: 249, g: 249, b: 249)
         // 设置导航条字体的颜色
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
+    }
+}
+
+/// MARK: UITableViewDataSource、UITableViewDelegate
+extension WBBaseViewController: UITableViewDataSource, UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }
