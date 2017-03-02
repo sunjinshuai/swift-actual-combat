@@ -38,6 +38,7 @@ class WBBaseViewController: UIViewController {
 extension WBBaseViewController {
 
     func setupUI() {
+        
         view.backgroundColor = UIColor.white
         
         setupNavigationBar()

@@ -8,12 +8,23 @@
 
 import UIKit
 
+private let identifier = "UITableViewCell"
+
 class HomeViewController: WBBaseViewController {
 
+    fileprivate lazy var falseDatas = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNavigationItem()
+        setupTableView()
+    }
+    
+    override func loadData() {
+        for i in 0 ..< 10 {
+            falseDatas.insert(i.description, at: 0)
+        }
     }
     
     //MARK: - 设置导航
@@ -22,6 +33,23 @@ class HomeViewController: WBBaseViewController {
         navItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_friendsearch", target: self, action: #selector(leftClick))
         // 右侧
         navItem.rightBarButtonItem = UIBarButtonItem(imgName: "navigationbar_pop", target: self, action: #selector(rightClick))
+    }
+    
+    private func setupTableView() {
+        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+    }
+}
+
+extension HomeViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return falseDatas.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        cell.textLabel?.text = "测试数据" + falseDatas[indexPath.row]
+        return cell
     }
 }
 
