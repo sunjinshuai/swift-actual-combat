@@ -12,7 +12,7 @@ class WBBaseViewController: UIViewController {
     
     var tableView: UITableView?
     var refreshControl: UIRefreshControl?
-    
+    var isPullup = false
     
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 64))
     lazy var navItem = UINavigationItem()
@@ -83,5 +83,23 @@ extension WBBaseViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        
+        let section = tableView.numberOfSections - 1
+        
+        if row < 0 || section < 0 {
+            return
+        }
+        
+        let count = tableView.numberOfRows(inSection: section)
+        
+        if row == (count - 1) && !isPullup {
+            
+            isPullup = true
+            loadData()
+        }
     }
 }

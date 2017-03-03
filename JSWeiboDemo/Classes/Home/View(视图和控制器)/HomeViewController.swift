@@ -26,9 +26,15 @@ class HomeViewController: WBBaseViewController {
         // 模拟加载数据
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
             for i in 0 ..< 10 {
-                self.falseDatas.insert(i.description, at: 0)
+                
+                if self.isPullup {
+                    self.falseDatas.append("上拉刷新\(i)")
+                } else {
+                    self.falseDatas.insert("下拉刷新\(i.description)", at: 0)
+                }
             }
             self.refreshControl?.endRefreshing()
+            self.isPullup = false
             self.tableView?.reloadData()
         }
     }
