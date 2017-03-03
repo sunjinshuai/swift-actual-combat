@@ -22,8 +22,14 @@ class HomeViewController: WBBaseViewController {
     }
     
     override func loadData() {
-        for i in 0 ..< 10 {
-            falseDatas.insert(i.description, at: 0)
+        
+        // 模拟加载数据
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            for i in 0 ..< 10 {
+                self.falseDatas.insert(i.description, at: 0)
+            }
+            self.refreshControl?.endRefreshing()
+            self.tableView?.reloadData()
         }
     }
     
