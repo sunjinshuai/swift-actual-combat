@@ -11,6 +11,8 @@ import UIKit
 class WBBaseViewController: UIViewController {
     
     var tableView: UITableView?
+    var refreshControl: UIRefreshControl?
+    
     
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 64))
     lazy var navItem = UINavigationItem()
@@ -40,10 +42,16 @@ extension WBBaseViewController {
     func setupUI() {
         
         view.backgroundColor = UIColor.white
-        
         setupNavigationBar()
-        
         setupTableView()
+        setupRefreshControl()
+    }
+    
+    /// 添加下拉刷新控件
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        tableView?.addSubview(refreshControl!)
+        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
     
     /// 设置tableView

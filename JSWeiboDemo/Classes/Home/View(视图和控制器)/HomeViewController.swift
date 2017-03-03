@@ -37,7 +37,10 @@ class HomeViewController: WBBaseViewController {
     
     private func setupTableView() {
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
-        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height, left: 0, bottom: 0, right: 0)
+        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height,
+                                               left: 0,
+                                               bottom: tabBarController?.tabBar.bounds.height ?? 49,
+                                               right: 0)
     }
 }
 
