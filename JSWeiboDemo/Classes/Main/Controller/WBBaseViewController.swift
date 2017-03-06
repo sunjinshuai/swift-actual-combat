@@ -10,6 +10,8 @@ import UIKit
 
 class WBBaseViewController: UIViewController {
     
+    var visitorView: VisitorView?
+    var loginState = false
     var tableView: UITableView?
     var refreshControl: UIRefreshControl?
     var isPullup = false
@@ -33,44 +35,6 @@ class WBBaseViewController: UIViewController {
     
     func loadData() {
         refreshControl?.endRefreshing()
-    }
-}
-
-/// 设置UI
-extension WBBaseViewController {
-
-    func setupUI() {
-        
-        view.backgroundColor = UIColor.white
-        setupNavigationBar()
-        setupTableView()
-        setupRefreshControl()
-    }
-    
-    /// 添加下拉刷新控件
-    private func setupRefreshControl() {
-        refreshControl = UIRefreshControl()
-        tableView?.addSubview(refreshControl!)
-        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
-    }
-    
-    /// 设置tableView
-    private func setupTableView() {
-    
-        tableView = UITableView(frame: view.bounds, style: .plain)
-        tableView?.delegate = self
-        tableView?.dataSource = self
-        view.insertSubview(tableView!, belowSubview: navigationBar)
-    }
-    
-    /// 设置导航条
-    private func setupNavigationBar() {
-        view.addSubview(navigationBar)
-        navigationBar.items = [navItem]
-        // 设置导航条渲染的颜色
-        navigationBar.barTintColor = RGB(r: 249, g: 249, b: 249)
-        // 设置导航条字体的颜色
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
     }
 }
 
@@ -101,5 +65,51 @@ extension WBBaseViewController: UITableViewDataSource, UITableViewDelegate {
             isPullup = true
             loadData()
         }
+    }
+}
+
+/// 设置UI
+extension WBBaseViewController {
+    
+    func setupUI() {
+        
+        view.backgroundColor = UIColor.white
+        setupNavigationBar()
+        setupRefreshControl()
+        loginState ? setupTableView() : setupVisitorView()
+    }
+    
+    /// 添加下拉刷新控件
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        tableView?.addSubview(refreshControl!)
+        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+    }
+    
+    /// 设置访客视图
+    private func setupVisitorView() {
+        
+        visitorView = VisitorView()
+        visitorView?.frame = view.bounds
+        view.insertSubview(visitorView!, belowSubview: navigationBar)
+    }
+    
+    /// 设置tableView
+    private func setupTableView() {
+        
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        view.insertSubview(tableView!, belowSubview: navigationBar)
+    }
+    
+    /// 设置导航条
+    private func setupNavigationBar() {
+        view.addSubview(navigationBar)
+        navigationBar.items = [navItem]
+        // 设置导航条渲染的颜色
+        navigationBar.barTintColor = RGB(r: 249, g: 249, b: 249)
+        // 设置导航条字体的颜色
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
     }
 }

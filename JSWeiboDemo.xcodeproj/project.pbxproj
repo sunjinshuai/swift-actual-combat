@@ -19,6 +19,7 @@
 		32FA84FA1D5E18C600B0B698 /* JSWeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA84F91D5E18C600B0B698 /* JSWeiboDemoUITests.swift */; };
 		4C689BA31E62BB2300B679D5 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689BA21E62BB2300B679D5 /* WBBaseViewController.swift */; };
 		4C689BA51E63097000B679D5 /* WBTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689BA41E63097000B679D5 /* WBTempViewController.swift */; };
+		4C689BAD1E6DA5A400B679D5 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689BAC1E6DA5A400B679D5 /* VisitorView.swift */; };
 		4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */; };
 		4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */; };
 		4CDDAC731E6278E500868E4A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */; };
@@ -68,6 +69,7 @@
 		32FA84FB1D5E18C600B0B698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C689BA21E62BB2300B679D5 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
 		4C689BA41E63097000B679D5 /* WBTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTempViewController.swift; sourceTree = "<group>"; };
+		4C689BAC1E6DA5A400B679D5 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
 		4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		3284F7651D5E217800F14FB3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4C689BA61E6DA4CB00B679D5 /* Visitor */,
 				4CDDAC7E1E628AFE00868E4A /* Compose */,
 				4C99DCEB1E5B3CE800D9C0A0 /* Public */,
 				3284F7661D5E217800F14FB3 /* Discover */,
@@ -357,6 +360,22 @@
 				04A3BA8CD604002EE3246FDF /* Pods_JSWeiboDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C689BA61E6DA4CB00B679D5 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				4C689BA71E6DA4CB00B679D5 /* View(视图和控制器) */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
+		4C689BA71E6DA4CB00B679D5 /* View(视图和控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				4C689BAC1E6DA5A400B679D5 /* VisitorView.swift */,
+			);
+			path = "View(视图和控制器)";
 			sourceTree = "<group>";
 		};
 		4C99DCE81E5B3C1300D9C0A0 /* View */ = {
@@ -619,6 +638,7 @@
 				4CDDAC7D1E6282B700868E4A /* UILabel+Extension.swift in Sources */,
 				4CDDAC771E627ED100868E4A /* WBVisitorViewController.swift in Sources */,
 				4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */,
+				4C689BAD1E6DA5A400B679D5 /* VisitorView.swift in Sources */,
 				3284F77E1D5E226000F14FB3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
