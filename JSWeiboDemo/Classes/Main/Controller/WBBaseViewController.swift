@@ -32,7 +32,7 @@ class WBBaseViewController: UIViewController {
     }
     
     func loadData() {
-        
+        refreshControl?.endRefreshing()
     }
 }
 
