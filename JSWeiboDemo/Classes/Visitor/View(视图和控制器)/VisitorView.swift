@@ -30,7 +30,8 @@ class VisitorView: UIView {
     }
     
     private func setupUI() {
-        backgroundColor = RGB(r: 235, g: 235, b: 235)
+        backgroundColor = RGB(r: 242, g: 242, b: 242)
+        addSubview(maskImageView)
         addSubview(iconImageView)
         addSubview(houseImageView)
         addSubview(titleLable)
@@ -40,20 +41,39 @@ class VisitorView: UIView {
         iconImageView.snp.makeConstraints { (make) in
             make.center.equalTo(self)
         }
-        
+        maskImageView.snp.makeConstraints { (make) in
+            make.center.equalTo(self)
+        }
         houseImageView.snp.makeConstraints { (make) in
             make.center.equalTo(self)
+        }
+        titleLable.snp.makeConstraints { (make) in
+            make.top.equalTo(maskImageView.snp.bottom).offset(16)
+            make.centerX.equalTo(self)
+            make.width.equalTo(230)
+        }
+        loginButton.snp.makeConstraints { (make) in
+            make.left.equalTo(titleLable)
+            make.top.equalTo(titleLable.snp.bottom).offset(16)
+            make.size.equalTo(CGSize(width: 100, height: 35))
+        }
+        registerButton.snp.makeConstraints { (make) in
+            make.size.equalTo(loginButton)
+            make.top.equalTo(loginButton)
+            make.right.equalTo(titleLable)
         }
     }
     
     // MARK: - 懒加载
     private lazy var iconImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_image_smallicon")
-
+    
+    private lazy var maskImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_mask_smallicon")
+    
     private lazy var houseImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_image_house")
     
     private lazy var titleLable: UILabel = {
-        let lab = UILabel(fontSize: 14.0,
-                          textColor: UIColor.darkGray,
+        let lab = UILabel(fontSize: 12.0,
+                          textColor: RGB(r: 208, g: 208, b: 208),
                           text: "关注一些人，回这里看看有什么惊喜关注一些人，回这里看看有什么惊喜")
         // 换行
         lab.numberOfLines = 0
@@ -75,7 +95,7 @@ class VisitorView: UIView {
         btn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
         btn.setTitleColor(UIColor.orange, for: UIControlState.highlighted)
         // 设置字体大小
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
         return btn
     }()
     
@@ -92,7 +112,7 @@ class VisitorView: UIView {
         btn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
         btn.setTitleColor(UIColor.orange, for: UIControlState.highlighted)
         // 设置字体大小
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
         return btn
     }()
 }
