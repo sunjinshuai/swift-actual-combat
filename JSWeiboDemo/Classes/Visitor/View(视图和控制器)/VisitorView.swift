@@ -9,7 +9,7 @@
 import UIKit
 
 class VisitorView: UIView {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -22,7 +22,7 @@ class VisitorView: UIView {
     
     // MARK: - 监听事件
     @objc private func loginButtonClick(){
-       
+        
     }
     
     @objc private func registerButtonClick(){
@@ -39,7 +39,7 @@ class VisitorView: UIView {
             setupFeedImageViewAnim()
         }
     }
-
+    
     // 设置圆圈动画
     func setupFeedImageViewAnim(){
         // 核心动画
