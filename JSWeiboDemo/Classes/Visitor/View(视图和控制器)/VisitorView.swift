@@ -29,10 +29,37 @@ class VisitorView: UIView {
         
     }
     
+    // MARK: - 供外界设置的方法
+    func setupVisiorViewInfo(imgName: String?, title: String?) {
+        if let imgName = imgName, let title = title {
+            houseImageView.image = UIImage(named: imgName)
+            titleLable.text = title
+            iconImageView.isHidden = true
+        } else {
+            setupFeedImageViewAnim()
+        }
+    }
+
+    // 设置圆圈动画
+    func setupFeedImageViewAnim(){
+        // 核心动画
+        let anim = CABasicAnimation(keyPath: "transform.rotation")
+        // 设置toValue
+        anim.toValue = M_PI * 2
+        // 设置时长
+        anim.duration = 20
+        // 重复次数
+        anim.repeatCount = MAXFLOAT
+        // 当切换控制器 或者程序退到后台 默认动画会被移除
+        anim.isRemovedOnCompletion = false
+        // 添加动画
+        iconImageView.layer.add(anim, forKey: nil)
+    }
+    
     private func setupUI() {
-        backgroundColor = RGB(r: 242, g: 242, b: 242)
-        addSubview(maskImageView)
+        backgroundColor = RGB(r: 237, g: 237, b: 237)
         addSubview(iconImageView)
+        addSubview(maskImageView)
         addSubview(houseImageView)
         addSubview(titleLable)
         addSubview(loginButton)

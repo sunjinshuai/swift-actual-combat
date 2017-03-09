@@ -19,6 +19,8 @@ class HomeViewController: WBBaseViewController {
         automaticallyAdjustsScrollViewInsets = false
         setupNavigationItem()
         setupTableView()
+        
+        visitorView?.setupVisiorViewInfo(imgName: nil, title: nil)
     }
     
     override func loadData() {
