@@ -15,15 +15,14 @@ extension UIViewController {
         static var navBarTintColor: UIColor = UIColor.defaultNavBarTintColor()
     }
     
-    open var navBarBgAlpha: CGFloat {
+    open var navBarBackgroundColorAlpha: CGFloat {
         get {
             let alpha = objc_getAssociatedObject(self, &AssociatedKeys.navBarBgAlpha) as? CGFloat
             if alpha == nil {
                 return 1.0
-            }else{
+            } else {
                 return alpha!
             }
-            
         }
         set {
             var alpha = newValue
@@ -46,7 +45,7 @@ extension UIViewController {
             let tintColor = objc_getAssociatedObject(self, &AssociatedKeys.navBarTintColor) as? UIColor
             if tintColor == nil {
                 return UIColor.defaultNavBarTintColor()
-            }else{
+            } else {
                 return tintColor!
             }
             
@@ -56,6 +55,4 @@ extension UIViewController {
             objc_setAssociatedObject(self, &AssociatedKeys.navBarTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
-    
 }

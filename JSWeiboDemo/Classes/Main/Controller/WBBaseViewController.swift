@@ -43,7 +43,7 @@ class WBBaseViewController: UIViewController {
         
         let test = UIViewController()
         test.view.backgroundColor = UIColor.red
-        test.navBarBgAlpha = 0
+        test.navBarBackgroundColorAlpha = 0
         test.navBarTintColor = .white
         self.navigationController?.pushViewController(test, animated: true)
         
