@@ -15,57 +15,15 @@ class WBBaseViewController: UIViewController {
     var tableView: UITableView?
     var refreshControl: UIRefreshControl?
     var isPullup = false
-    
-    // 登录按钮
-    private lazy var loginButton: UIButton = {
-        let btn = UIButton()
-        btn.frame = CGRect(x: 200, y: 200, width: 100, height: 50)
-        // 点击事件
-        btn.addTarget(self, action: #selector(loginButtonClick), for: UIControlEvents.touchUpInside)
-        // 设置背景图片
-        btn.setBackgroundImage(UIImage(named:"common_button_white"), for: UIControlState.normal)
-        // 设置文字
-        btn.setTitle("登录", for: UIControlState.normal)
-        // 设置文字颜色
-        btn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
-        btn.setTitleColor(UIColor.orange, for: UIControlState.highlighted)
-        // 设置字体大小
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
-        return btn
-    }()
-    
-    
-    lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 64))
-    lazy var navItem = UINavigationItem()
-    
-    // MARK: - 监听事件
-    @objc private func loginButtonClick(){
-        
-        let test = UIViewController()
-        test.view.backgroundColor = UIColor.red
-        test.navBarBackgroundColorAlpha = 0
-        test.navBarTintColor = .white
-        self.navigationController?.pushViewController(test, animated: true)
-        
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         
         loadData()
-        
-        self.view.addSubview(loginButton)
-        
     }
-    
-    override var title: String? {
-        didSet {
-            navItem.title = title
-        }
-    }
-    
+
     func loadData() {
         refreshControl?.endRefreshing()
     }
@@ -106,10 +64,9 @@ extension WBBaseViewController {
     
     func setupUI() {
         
-        view.backgroundColor = UIColor.yellow
-//        setupNavigationBar()
-//        setupRefreshControl()
-//        loginState ? setupTableView() : setupVisitorView()
+        view.backgroundColor = UIColor.white
+        setupRefreshControl()
+        loginState ? setupTableView() : setupVisitorView()
     }
     
     /// 添加下拉刷新控件
@@ -124,7 +81,7 @@ extension WBBaseViewController {
         
         visitorView = VisitorView()
         visitorView?.frame = view.bounds
-        view.insertSubview(visitorView!, belowSubview: navigationBar)
+        view.insertSubview(visitorView!, belowSubview: (self.navigationController?.navigationBar)!)
     }
     
     /// 设置tableView
@@ -133,16 +90,6 @@ extension WBBaseViewController {
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView?.delegate = self
         tableView?.dataSource = self
-        view.insertSubview(tableView!, belowSubview: navigationBar)
-    }
-    
-    /// 设置导航条
-    private func setupNavigationBar() {
-        view.addSubview(navigationBar)
-        navigationBar.items = [navItem]
-        // 设置导航条渲染的颜色
-        navigationBar.barTintColor = RGB(r: 249, g: 249, b: 249)
-        // 设置导航条字体的颜色
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
+        view.insertSubview(tableView!, belowSubview: (self.navigationController?.navigationBar)!)
     }
 }

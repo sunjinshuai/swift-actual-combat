@@ -13,9 +13,6 @@ class WBNavigationController: UINavigationController, UIGestureRecognizerDelegat
         super.viewDidLoad()
         // 当自定义导航左侧按钮后 点击屏幕左侧不能返回的bug 解决方法
         interactivePopGestureRecognizer?.delegate = self
-        
-        
-//        navigationBar.isHidden = true
     }
     // 将要接受手势点击
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
@@ -33,7 +30,7 @@ class WBNavigationController: UINavigationController, UIGestureRecognizerDelegat
                 if childViewControllers.count == 1 {
                     title = childViewControllers.first?.title ?? "返回"
                 }
-                vc.navItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_back_withtext", title: title, target: self, action: #selector(popToParent))
+                vc.navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_back_withtext", title: title, target: self, action: #selector(popToParent))
             }
         }
         super.pushViewController(viewController, animated: animated)

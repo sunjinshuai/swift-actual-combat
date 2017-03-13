@@ -44,14 +44,14 @@ class HomeViewController: WBBaseViewController {
     //MARK: - 设置导航
     private func setupNavigationItem() {
         // 左侧
-        navItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_friendsearch", target: self, action: #selector(leftClick))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_friendsearch", target: self, action: #selector(leftClick))
         // 右侧
-        navItem.rightBarButtonItem = UIBarButtonItem(imgName: "navigationbar_pop", target: self, action: #selector(rightClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imgName: "navigationbar_pop", target: self, action: #selector(rightClick))
     }
     
     private func setupTableView() {
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
-        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height,
+        tableView?.contentInset = UIEdgeInsets(top: (self.navigationController?.navigationBar.bounds.height)!,
                                                left: 0,
                                                bottom: tabBarController?.tabBar.bounds.height ?? 49,
                                                right: 0)

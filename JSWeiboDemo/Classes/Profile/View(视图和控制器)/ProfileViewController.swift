@@ -21,10 +21,10 @@ class ProfileViewController: WBBaseViewController {
     //MARK: - 设置导航
     private func setupNavigationItem() {
         // 左侧
-        navItem.leftBarButtonItem = UIBarButtonItem(imgName: nil, title: "添加好友", target: self, action: #selector(addFriend))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: nil, title: "添加好友", target: self, action: #selector(addFriend))
         
         // 右侧
-        navItem.rightBarButtonItem = UIBarButtonItem(imgName: nil, title: "设置", target: self, action: #selector(setting))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imgName: nil, title: "设置", target: self, action: #selector(setting))
     }
 }
 

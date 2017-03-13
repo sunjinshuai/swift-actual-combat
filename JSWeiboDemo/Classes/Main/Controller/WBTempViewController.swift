@@ -19,7 +19,7 @@ class WBTempViewController: WBBaseViewController {
     //MARK: - 设置导航
     private func setupNavigationItem() {
         // 右侧
-        navItem.rightBarButtonItem = UIBarButtonItem(imgName: nil, title: "下一个", target: self, action: #selector(pushToNextController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imgName: nil, title: "下一个", target: self, action: #selector(pushToNextController))
     }
 
 }
