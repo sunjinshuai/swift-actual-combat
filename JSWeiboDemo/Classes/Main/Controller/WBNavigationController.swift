@@ -15,7 +15,7 @@ class WBNavigationController: UINavigationController, UIGestureRecognizerDelegat
         interactivePopGestureRecognizer?.delegate = self
         
         
-        navigationBar.isHidden = true
+//        navigationBar.isHidden = true
     }
     // 将要接受手势点击
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {

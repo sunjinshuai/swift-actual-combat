@@ -20,6 +20,9 @@
 		4C689BA31E62BB2300B679D5 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689BA21E62BB2300B679D5 /* WBBaseViewController.swift */; };
 		4C689BA51E63097000B679D5 /* WBTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689BA41E63097000B679D5 /* WBTempViewController.swift */; };
 		4C689BAD1E6DA5A400B679D5 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689BAC1E6DA5A400B679D5 /* VisitorView.swift */; };
+		4C689CAB1E76EFB400B679D5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689CAA1E76EFB400B679D5 /* UIColor+Extension.swift */; };
+		4C689CAF1E76F63A00B679D5 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689CAE1E76F63A00B679D5 /* UINavigationController+Extension.swift */; };
+		4C689CB11E76F6E800B679D5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689CB01E76F6E700B679D5 /* UIViewController+Extension.swift */; };
 		4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */; };
 		4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */; };
 		4CDDAC731E6278E500868E4A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */; };
@@ -70,6 +73,9 @@
 		4C689BA21E62BB2300B679D5 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
 		4C689BA41E63097000B679D5 /* WBTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTempViewController.swift; sourceTree = "<group>"; };
 		4C689BAC1E6DA5A400B679D5 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		4C689CAA1E76EFB400B679D5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4C689CAE1E76F63A00B679D5 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		4C689CB01E76F6E700B679D5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
 		4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -426,6 +432,9 @@
 				4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */,
 				4CDDAC7A1E62814C00868E4A /* UIImageView+Extension.swift */,
 				4CDDAC7C1E6282B700868E4A /* UILabel+Extension.swift */,
+				4C689CAA1E76EFB400B679D5 /* UIColor+Extension.swift */,
+				4C689CAE1E76F63A00B679D5 /* UINavigationController+Extension.swift */,
+				4C689CB01E76F6E700B679D5 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -623,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C689BA51E63097000B679D5 /* WBTempViewController.swift in Sources */,
+				4C689CAB1E76EFB400B679D5 /* UIColor+Extension.swift in Sources */,
 				32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */,
 				3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */,
 				4CDDAC7B1E62814C00868E4A /* UIImageView+Extension.swift in Sources */,
@@ -631,6 +641,7 @@
 				4CDDAC831E628B1600868E4A /* WBComposeViewController.swift in Sources */,
 				4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */,
 				3284F7881D5E238B00F14FB3 /* WBTabBarController.swift in Sources */,
+				4C689CAF1E76F63A00B679D5 /* UINavigationController+Extension.swift in Sources */,
 				4C689BA31E62BB2300B679D5 /* WBBaseViewController.swift in Sources */,
 				3284F78A1D5E23A500F14FB3 /* WBNavigationController.swift in Sources */,
 				3284F7821D5E229500F14FB3 /* ProfileViewController.swift in Sources */,
@@ -638,6 +649,7 @@
 				4CDDAC7D1E6282B700868E4A /* UILabel+Extension.swift in Sources */,
 				4CDDAC771E627ED100868E4A /* WBVisitorViewController.swift in Sources */,
 				4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */,
+				4C689CB11E76F6E800B679D5 /* UIViewController+Extension.swift in Sources */,
 				4C689BAD1E6DA5A400B679D5 /* VisitorView.swift in Sources */,
 				3284F77E1D5E226000F14FB3 /* HomeViewController.swift in Sources */,
 			);
