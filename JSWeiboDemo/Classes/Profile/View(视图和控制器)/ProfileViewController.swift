@@ -35,7 +35,10 @@ extension ProfileViewController {
      */
     // 左侧按钮点击
     @objc fileprivate func addFriend(){
-        print("左侧按钮点击")
+        
+        let personCenter = PersonCenterViewController()
+        self.navigationController?.pushViewController(personCenter, animated: true)
+        
     }
     // 右侧按钮点击
     @objc fileprivate func setting(){
