@@ -25,13 +25,11 @@ class WBNavigationController: UINavigationController, UIGestureRecognizerDelegat
             // 隐藏
             viewController.hidesBottomBarWhenPushed = true
             
-            if let vc = viewController as? WBBaseViewController {
-                var title = "返回"
-                if childViewControllers.count == 1 {
-                    title = childViewControllers.first?.title ?? "返回"
-                }
-                vc.navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_back_withtext", title: title, target: self, action: #selector(popToParent))
+            var title = "返回"
+            if childViewControllers.count == 1 {
+                title = childViewControllers.first?.title ?? "返回"
             }
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_back_withtext", title: title, target: self, action: #selector(popToParent))
         }
         super.pushViewController(viewController, animated: animated)
     }

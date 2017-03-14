@@ -19,7 +19,7 @@ class PersonCenterViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        
+        self.automaticallyAdjustsScrollViewInsets = false
         self.navBarBackgroundColorAlpha = 0
         self.navBarTintColor = .white
     }
@@ -58,6 +58,16 @@ extension PersonCenterViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let redView = UIView()
+        redView.backgroundColor = UIColor.red
+        return redView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 200
     }
 }
 
@@ -105,10 +115,10 @@ extension PersonCenterViewController {
     /// 设置tableView
     private func setupTableView() {
         
-        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView = UITableView(frame: view.bounds, style: .grouped)
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
-        view.insertSubview(tableView!, belowSubview: (self.navigationController?.navigationBar)!)
+        view.addSubview(tableView!)
     }
 }
