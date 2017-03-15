@@ -8,7 +8,14 @@
 
 import UIKit
 
+@objc protocol VisitorViewDelegate: NSObjectProtocol {
+    func login()
+    func register()
+}
+
 class VisitorView: UIView {
+    
+    weak var delegate: VisitorViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,19 +29,19 @@ class VisitorView: UIView {
     
     // MARK: - 监听事件
     @objc private func login(){
-        
+        delegate?.login()
     }
     
     @objc private func register(){
-        
+        delegate?.register()
     }
     
     // MARK: - 供外界设置的方法
     func setupVisiorViewInfo(imgName: String?, title: String?) {
+        
         if let imgName = imgName {
             houseImageView.image = UIImage(named: imgName)
             iconImageView.isHidden = true
-        } else {
         }
         setupFeedImageViewAnim()
         titleLable.text = title
@@ -99,7 +106,7 @@ class VisitorView: UIView {
     private lazy var houseImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_image_house")
     
     private lazy var titleLable: UILabel = {
-        let lab = UILabel(fontSize: 12.0,
+        let lab = UILabel(fontSize: 14.0,
                           textColor: RGB(r: 208, g: 208, b: 208))
         // 换行
         lab.numberOfLines = 0

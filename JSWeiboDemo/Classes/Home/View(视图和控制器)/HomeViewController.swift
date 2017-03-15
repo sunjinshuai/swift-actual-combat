@@ -21,6 +21,7 @@ class HomeViewController: WBBaseViewController {
         setupTableView()
         
         visitorView?.setupVisiorViewInfo(imgName: nil, title: "关注一些人，回这里看看有什么惊喜")
+        visitorView?.delegate = self
     }
     
     override func loadData() {
@@ -88,5 +89,17 @@ extension HomeViewController {
         print("右侧按钮点击")
         let temp = WBTempViewController()
         self.navigationController?.pushViewController(temp, animated: true)
+    }
+}
+
+//MARK: - Delegate
+extension HomeViewController: VisitorViewDelegate {
+    
+    func login() {
+        print("登陆")
+    }
+    
+    func register() {
+        print("注册")
     }
 }
