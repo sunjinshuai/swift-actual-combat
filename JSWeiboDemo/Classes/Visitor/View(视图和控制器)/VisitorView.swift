@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - Delegate
 @objc protocol VisitorViewDelegate: NSObjectProtocol {
     func login()
     func register()
@@ -47,6 +48,60 @@ class VisitorView: UIView {
         titleLable.text = title
     }
     
+    // MARK: - 懒加载
+    fileprivate lazy var iconImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_image_smallicon")
+    
+    fileprivate lazy var maskImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_mask_smallicon")
+    
+    fileprivate lazy var houseImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_image_house")
+    
+    fileprivate lazy var titleLable: UILabel = {
+        let lab = UILabel(fontSize: 14.0,
+                          textColor: RGB(r: 208, g: 208, b: 208))
+        // 换行
+        lab.numberOfLines = 0
+        // 对齐方式
+        lab.textAlignment = .center
+        return lab
+    }()
+    
+    // 登录按钮
+    fileprivate lazy var loginButton: UIButton = {
+        let btn = UIButton()
+        // 点击事件
+        btn.addTarget(self, action: #selector(login), for: UIControlEvents.touchUpInside)
+        // 设置背景图片
+        btn.setBackgroundImage(UIImage(named:"common_button_white"), for: UIControlState.normal)
+        // 设置文字
+        btn.setTitle("登录", for: UIControlState.normal)
+        // 设置文字颜色
+        btn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
+        btn.setTitleColor(UIColor.orange, for: UIControlState.highlighted)
+        // 设置字体大小
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
+        return btn
+    }()
+    
+    // 注册按钮
+    fileprivate lazy var registerButton: UIButton = {
+        let btn = UIButton()
+        // 点击事件
+        btn.addTarget(self, action: #selector(register), for: UIControlEvents.touchUpInside)
+        // 设置背景图片
+        btn.setBackgroundImage(UIImage(named:"common_button_white"), for: UIControlState.normal)
+        // 设置文字
+        btn.setTitle("注册", for: UIControlState.normal)
+        // 设置文字颜色
+        btn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
+        btn.setTitleColor(UIColor.orange, for: UIControlState.highlighted)
+        // 设置字体大小
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
+        return btn
+    }()
+}
+
+extension VisitorView {
+    
     // 设置圆圈动画
     func setupFeedImageViewAnim(){
         // 核心动画
@@ -63,7 +118,13 @@ class VisitorView: UIView {
         iconImageView.layer.add(anim, forKey: nil)
     }
     
-    private func setupUI() {
+}
+
+// MARK: - 设置界面
+extension VisitorView {
+    
+    func setupUI() {
+        
         backgroundColor = RGB(r: 237, g: 237, b: 237)
         addSubview(iconImageView)
         addSubview(maskImageView)
@@ -97,55 +158,4 @@ class VisitorView: UIView {
             make.right.equalTo(titleLable)
         }
     }
-    
-    // MARK: - 懒加载
-    private lazy var iconImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_image_smallicon")
-    
-    private lazy var maskImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_mask_smallicon")
-    
-    private lazy var houseImageView: UIImageView = UIImageView.init(imageName: "visitordiscover_feed_image_house")
-    
-    private lazy var titleLable: UILabel = {
-        let lab = UILabel(fontSize: 14.0,
-                          textColor: RGB(r: 208, g: 208, b: 208))
-        // 换行
-        lab.numberOfLines = 0
-        // 对齐方式
-        lab.textAlignment = .center
-        return lab
-    }()
-    
-    // 登录按钮
-    private lazy var loginButton: UIButton = {
-        let btn = UIButton()
-        // 点击事件
-        btn.addTarget(self, action: #selector(login), for: UIControlEvents.touchUpInside)
-        // 设置背景图片
-        btn.setBackgroundImage(UIImage(named:"common_button_white"), for: UIControlState.normal)
-        // 设置文字
-        btn.setTitle("登录", for: UIControlState.normal)
-        // 设置文字颜色
-        btn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
-        btn.setTitleColor(UIColor.orange, for: UIControlState.highlighted)
-        // 设置字体大小
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
-        return btn
-    }()
-    
-    // 注册按钮
-    private lazy var registerButton: UIButton = {
-        let btn = UIButton()
-        // 点击事件
-        btn.addTarget(self, action: #selector(register), for: UIControlEvents.touchUpInside)
-        // 设置背景图片
-        btn.setBackgroundImage(UIImage(named:"common_button_white"), for: UIControlState.normal)
-        // 设置文字
-        btn.setTitle("注册", for: UIControlState.normal)
-        // 设置文字颜色
-        btn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
-        btn.setTitleColor(UIColor.orange, for: UIControlState.highlighted)
-        // 设置字体大小
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
-        return btn
-    }()
 }
