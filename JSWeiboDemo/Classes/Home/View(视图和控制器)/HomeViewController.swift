@@ -20,7 +20,7 @@ class HomeViewController: WBBaseViewController {
         setupNavigationItem()
         setupTableView()
         
-        visitorView?.setupVisiorViewInfo(imgName: nil, title: nil)
+        visitorView?.setupVisiorViewInfo(imgName: nil, title: "关注一些人，回这里看看有什么惊喜")
     }
     
     override func loadData() {

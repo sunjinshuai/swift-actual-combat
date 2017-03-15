@@ -21,23 +21,23 @@ class VisitorView: UIView {
     }
     
     // MARK: - 监听事件
-    @objc private func loginButtonClick(){
+    @objc private func login(){
         
     }
     
-    @objc private func registerButtonClick(){
+    @objc private func register(){
         
     }
     
     // MARK: - 供外界设置的方法
     func setupVisiorViewInfo(imgName: String?, title: String?) {
-        if let imgName = imgName, let title = title {
+        if let imgName = imgName {
             houseImageView.image = UIImage(named: imgName)
-            titleLable.text = title
             iconImageView.isHidden = true
         } else {
-            setupFeedImageViewAnim()
         }
+        setupFeedImageViewAnim()
+        titleLable.text = title
     }
     
     // 设置圆圈动画
@@ -100,8 +100,7 @@ class VisitorView: UIView {
     
     private lazy var titleLable: UILabel = {
         let lab = UILabel(fontSize: 12.0,
-                          textColor: RGB(r: 208, g: 208, b: 208),
-                          text: "关注一些人，回这里看看有什么惊喜关注一些人，回这里看看有什么惊喜")
+                          textColor: RGB(r: 208, g: 208, b: 208))
         // 换行
         lab.numberOfLines = 0
         // 对齐方式
@@ -113,7 +112,7 @@ class VisitorView: UIView {
     private lazy var loginButton: UIButton = {
         let btn = UIButton()
         // 点击事件
-        btn.addTarget(self, action: #selector(loginButtonClick), for: UIControlEvents.touchUpInside)
+        btn.addTarget(self, action: #selector(login), for: UIControlEvents.touchUpInside)
         // 设置背景图片
         btn.setBackgroundImage(UIImage(named:"common_button_white"), for: UIControlState.normal)
         // 设置文字
@@ -130,7 +129,7 @@ class VisitorView: UIView {
     private lazy var registerButton: UIButton = {
         let btn = UIButton()
         // 点击事件
-        btn.addTarget(self, action: #selector(registerButtonClick), for: UIControlEvents.touchUpInside)
+        btn.addTarget(self, action: #selector(register), for: UIControlEvents.touchUpInside)
         // 设置背景图片
         btn.setBackgroundImage(UIImage(named:"common_button_white"), for: UIControlState.normal)
         // 设置文字
