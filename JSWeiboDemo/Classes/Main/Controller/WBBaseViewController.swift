@@ -50,6 +50,19 @@ extension WBBaseViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// MARK: - Delegate
+extension WBBaseViewController: VisitorViewDelegate {
+    
+    func login() {
+        print("用户登录")
+    }
+    
+    func register() {
+        print("用户注册")
+    }
+}
+
+
 // MARK: - 设置界面
 extension WBBaseViewController {
     
@@ -85,6 +98,7 @@ extension WBBaseViewController {
         
         visitorView = VisitorView()
         visitorView?.frame = view.bounds
+        visitorView?.delegate = self;
         view.insertSubview(visitorView!, belowSubview: (self.navigationController?.navigationBar)!)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
@@ -95,11 +109,5 @@ extension WBBaseViewController {
 // MARK: - 访客视图监听方法
 extension WBBaseViewController {
     
-    @objc fileprivate func login() {
-        print("用户登录")
-    }
-    
-    @objc fileprivate func register() {
-        print("用户注册")
-    }
+
 }

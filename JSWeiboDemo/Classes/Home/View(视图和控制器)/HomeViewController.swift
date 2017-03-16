@@ -18,7 +18,6 @@ class HomeViewController: WBBaseViewController {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
         visitorView?.setupVisiorViewInfo(imgName: nil, title: "关注一些人，回这里看看有什么惊喜")
-//        visitorView?.delegate = self
     }
 }
 
@@ -98,15 +97,3 @@ extension HomeViewController {
     }
     
 }
-
-// MARK: - Delegate
-//extension HomeViewController: VisitorViewDelegate {
-//    
-//    func fileprivate login() {
-//        print("登陆")
-//    }
-//    
-//    func fileprivate register() {
-//        print("注册")
-//    }
-//}
