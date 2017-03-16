@@ -17,48 +17,12 @@ class HomeViewController: WBBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
-        setupNavigationItem()
-        setupTableView()
-        
         visitorView?.setupVisiorViewInfo(imgName: nil, title: "关注一些人，回这里看看有什么惊喜")
-        visitorView?.delegate = self
-    }
-    
-    override func loadData() {
-        
-        // 模拟加载数据
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-            for i in 0 ..< 10 {
-                
-                if self.isPullup {
-                    self.falseDatas.append("上拉刷新\(i)")
-                } else {
-                    self.falseDatas.insert("下拉刷新\(i.description)", at: 0)
-                }
-            }
-            self.refreshControl?.endRefreshing()
-            self.isPullup = false
-            self.tableView?.reloadData()
-        }
-    }
-    
-    //MARK: - 设置导航
-    private func setupNavigationItem() {
-        // 左侧
-        navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_friendsearch", target: self, action: #selector(leftClick))
-        // 右侧
-        navigationItem.rightBarButtonItem = UIBarButtonItem(imgName: "navigationbar_pop", target: self, action: #selector(rightClick))
-    }
-    
-    private func setupTableView() {
-        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
-        tableView?.contentInset = UIEdgeInsets(top: (self.navigationController?.navigationBar.bounds.height)!,
-                                               left: 0,
-                                               bottom: tabBarController?.tabBar.bounds.height ?? 49,
-                                               right: 0)
+//        visitorView?.delegate = self
     }
 }
 
+// MARK: - UITableViewDataSource、UITableViewDelegate
 extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,19 +36,37 @@ extension HomeViewController {
     }
 }
 
+// MARK: - 加载数据
+extension HomeViewController {
+    
+    override func loadData() {
+        super.loadData()
+        // 模拟加载数据
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            for i in 0 ..< 10 {
+                if self.isPullup {
+                    self.falseDatas.append("上拉刷新\(i)")
+                } else {
+                    self.falseDatas.insert("下拉刷新\(i.description)", at: 0)
+                }
+            }
+            self.refreshControl?.endRefreshing()
+            self.isPullup = false
+            self.tableView?.reloadData()
+        }
+    }
+}
+
 //MARK: - 监听事件
 extension HomeViewController {
-    /*
-     private 私有的在自己类内部使用没有问题 但是 如果吧方法放到其类的extension 就会找不到该方法 需要使用fileprivate 来修饰
-     */
-    // 左侧按钮点击
+    
     @objc fileprivate func leftClick(){
         print("左侧按钮点击")
         
         let temp = WBTempViewController()
         self.navigationController?.pushViewController(temp, animated: true)
     }
-    // 右侧按钮点击
+    
     @objc fileprivate func rightClick(){
         print("右侧按钮点击")
         let temp = WBTempViewController()
@@ -92,14 +74,39 @@ extension HomeViewController {
     }
 }
 
-//MARK: - Delegate
-extension HomeViewController: VisitorViewDelegate {
+//MARK: - 设置界面
+extension HomeViewController {
     
-    func login() {
-        print("登陆")
+    override func setupTableView() {
+        super.setupTableView()
+        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        tableView?.contentInset = UIEdgeInsets(top: (self.navigationController?.navigationBar.bounds.height)!,
+                                               left: 0,
+                                               bottom: tabBarController?.tabBar.bounds.height ?? 49,
+                                               right: 0)
+
+        setupNavigationItem()
     }
     
-    func register() {
-        print("注册")
+    
+    //MARK: - 设置导航
+    private func setupNavigationItem() {
+        // 左侧
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imgName: "navigationbar_friendsearch", target: self, action: #selector(leftClick))
+        // 右侧
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imgName: "navigationbar_pop", target: self, action: #selector(rightClick))
     }
+    
 }
+
+// MARK: - Delegate
+//extension HomeViewController: VisitorViewDelegate {
+//    
+//    func fileprivate login() {
+//        print("登陆")
+//    }
+//    
+//    func fileprivate register() {
+//        print("注册")
+//    }
+//}

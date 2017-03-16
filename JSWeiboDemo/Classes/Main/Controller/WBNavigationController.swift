@@ -13,6 +13,12 @@ class WBNavigationController: UINavigationController, UIGestureRecognizerDelegat
         super.viewDidLoad()
         // 当自定义导航左侧按钮后 点击屏幕左侧不能返回的bug 解决方法
         interactivePopGestureRecognizer?.delegate = self
+        //设置 navBar 的渲染颜色
+        navigationBar.barTintColor = UIColor.rgbColorFromHex(rgb: 0xF6F6F6)
+        //设置navBar 的标题字体颜色
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkGray]
+        //设置系统按钮的文字渲染颜色  只对系统.plain 的方法有效
+        navigationBar.tintColor = UIColor.orange
     }
     // 将要接受手势点击
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
