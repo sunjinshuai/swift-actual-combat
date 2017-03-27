@@ -34,6 +34,10 @@ class WBNavigationController: UINavigationController, UIGestureRecognizerDelegat
         super.pushViewController(viewController, animated: animated)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return visibleViewController?.preferredStatusBarStyle ?? .default
+    }
+    
     // MARK: - 监听事件
     @objc private func leftClick(){
         _ = popViewController(animated: true)
