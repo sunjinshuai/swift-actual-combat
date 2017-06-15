@@ -522,7 +522,9 @@
 				TargetAttributes = {
 					32FA84D51D5E18C600B0B698 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = E7Z6RKJ7Q8;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 					32FA84E91D5E18C600B0B698 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -801,11 +803,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = E7Z6RKJ7Q8;
 				INFOPLIST_FILE = JSWeiboDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.51fanxing.JSWeiboDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7729ee46-ec76-43a6-a62b-2f395e1d14fc";
+				PROVISIONING_PROFILE_SPECIFIER = sun_zhibo;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -820,11 +826,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = E7Z6RKJ7Q8;
 				INFOPLIST_FILE = JSWeiboDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.51fanxing.JSWeiboDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7729ee46-ec76-43a6-a62b-2f395e1d14fc";
+				PROVISIONING_PROFILE_SPECIFIER = sun_zhibo;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
