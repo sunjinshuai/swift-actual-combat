@@ -42,7 +42,8 @@ extension ProfileViewController {
     }
     // 右侧按钮点击
     @objc fileprivate func setting(){
-        print("右侧按钮点击")
         
+        let setting = SettingViewController()
+        self.navigationController?.pushViewController(setting, animated: true)
     }
 }
