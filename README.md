@@ -2,6 +2,9 @@
 
 ![效果图](https://github.com/sunjinshuai/Weibo/blob/master/weibo.gif)
 
+#### 更新
+* 增加了3DTouch
+
 ===================================  
 
 ps:
