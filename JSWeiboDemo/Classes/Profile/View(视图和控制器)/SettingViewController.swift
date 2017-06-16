@@ -70,6 +70,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         cell.textLabel?.text = "第\(indexPath.row)行"
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
     }
     
@@ -110,6 +111,7 @@ extension SettingViewController {
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.backgroundColor = RGB(r: 242, g: 242, b: 242)
+        tableView?.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         view.addSubview(tableView!)
     }
