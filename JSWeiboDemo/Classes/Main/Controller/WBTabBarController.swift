@@ -17,7 +17,7 @@ class WBTabBarController: UITabBarController {
         
         tabBar.closure = {
             
-            let compose = WBNavigationController(rootViewController: WBComposeViewController())
+            let compose = WBComposeViewController()
             self.present(compose, animated: true, completion: nil)
         }
 
@@ -45,7 +45,7 @@ extension WBTabBarController {
         // 设置title
         childController.title = title
         // 设置title颜色
-        childController.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: WBTHEMECOLOR], for: UIControlState.selected)
+        childController.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: RGB(r: 51, g: 51, b: 51)], for: UIControlState.selected)
         // 设置image
         // withRenderingMode 渲染方式
         // alwaysOriginal 采用图片原生颜色
