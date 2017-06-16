@@ -10,7 +10,6 @@
 		3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F77B1D5E223D00F14FB3 /* DiscoverViewController.swift */; };
 		3284F77E1D5E226000F14FB3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F77D1D5E226000F14FB3 /* HomeViewController.swift */; };
 		3284F7801D5E227D00F14FB3 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F77F1D5E227D00F14FB3 /* MessageViewController.swift */; };
-		3284F7821D5E229500F14FB3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7811D5E229500F14FB3 /* ProfileViewController.swift */; };
 		3284F7881D5E238B00F14FB3 /* WBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7871D5E238B00F14FB3 /* WBTabBarController.swift */; };
 		3284F78A1D5E23A500F14FB3 /* WBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */; };
 		3284F78C1D5E24E500F14FB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3284F78B1D5E24E500F14FB3 /* Images.xcassets */; };
@@ -23,10 +22,14 @@
 		4C689CAB1E76EFB400B679D5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689CAA1E76EFB400B679D5 /* UIColor+Extension.swift */; };
 		4C689CAF1E76F63A00B679D5 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689CAE1E76F63A00B679D5 /* UINavigationController+Extension.swift */; };
 		4C689CB11E76F6E800B679D5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689CB01E76F6E700B679D5 /* UIViewController+Extension.swift */; };
-		4C689CB31E78443700B679D5 /* PersonCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689CB21E78443700B679D5 /* PersonCenterViewController.swift */; };
+		4C860C5C1EF3D6D300E429E4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C860C591EF3D6D300E429E4 /* SettingViewController.swift */; };
+		4C860C5D1EF3D6D300E429E4 /* PersonCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C860C5A1EF3D6D300E429E4 /* PersonCenterViewController.swift */; };
+		4C860C5E1EF3D6D300E429E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C860C5B1EF3D6D300E429E4 /* ProfileViewController.swift */; };
+		4C860C601EF3D71400E429E4 /* ProfileHeadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C860C5F1EF3D71400E429E4 /* ProfileHeadViewCell.swift */; };
+		4C860C621EF3D72000E429E4 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C860C611EF3D72000E429E4 /* ProfileViewCell.swift */; };
+		4C860C651EF3DCB200E429E4 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C860C641EF3DCB200E429E4 /* ProfileModel.swift */; };
 		4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */; };
 		4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */; };
-		4CC0F46C1EF2896E002AB97A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F46B1EF2896E002AB97A /* SettingViewController.swift */; };
 		4CDDAC731E6278E500868E4A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */; };
 		4CDDAC771E627ED100868E4A /* WBVisitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC761E627ED100868E4A /* WBVisitorViewController.swift */; };
 		4CDDAC791E627F2E00868E4A /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC781E627F2E00868E4A /* WBVisitorView.swift */; };
@@ -59,7 +62,6 @@
 		3284F77B1D5E223D00F14FB3 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		3284F77D1D5E226000F14FB3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3284F77F1D5E227D00F14FB3 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		3284F7811D5E229500F14FB3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3284F7871D5E238B00F14FB3 /* WBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarController.swift; sourceTree = "<group>"; };
 		3284F7891D5E23A500F14FB3 /* WBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationController.swift; sourceTree = "<group>"; };
 		3284F78B1D5E24E500F14FB3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -78,10 +80,14 @@
 		4C689CAA1E76EFB400B679D5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4C689CAE1E76F63A00B679D5 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		4C689CB01E76F6E700B679D5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		4C689CB21E78443700B679D5 /* PersonCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCenterViewController.swift; sourceTree = "<group>"; };
+		4C860C591EF3D6D300E429E4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		4C860C5A1EF3D6D300E429E4 /* PersonCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCenterViewController.swift; sourceTree = "<group>"; };
+		4C860C5B1EF3D6D300E429E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4C860C5F1EF3D71400E429E4 /* ProfileHeadViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeadViewCell.swift; sourceTree = "<group>"; };
+		4C860C611EF3D72000E429E4 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		4C860C641EF3DCB200E429E4 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		4C99DCE91E5B3C5500D9C0A0 /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
 		4C99DCED1E5B3D0500D9C0A0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		4CC0F46B1EF2896E002AB97A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		4CDDAC761E627ED100868E4A /* WBVisitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorViewController.swift; sourceTree = "<group>"; };
 		4CDDAC781E627F2E00868E4A /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
@@ -264,43 +270,11 @@
 		3284F7761D5E217800F14FB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				3284F7791D5E217800F14FB3 /* View(视图和控制器) */,
-				3284F77A1D5E217800F14FB3 /* ViewModel(视图模型) */,
-				3284F7771D5E217800F14FB3 /* Model(模型) */,
-				3284F7781D5E217800F14FB3 /* Tools(工具) */,
+				4C860C631EF3DC9E00E429E4 /* Model */,
+				4C860C581EF3D6D300E429E4 /* Controller */,
+				4C860C571EF3D6D300E429E4 /* View */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		3284F7771D5E217800F14FB3 /* Model(模型) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model(模型)";
-			sourceTree = "<group>";
-		};
-		3284F7781D5E217800F14FB3 /* Tools(工具) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Tools(工具)";
-			sourceTree = "<group>";
-		};
-		3284F7791D5E217800F14FB3 /* View(视图和控制器) */ = {
-			isa = PBXGroup;
-			children = (
-				3284F7811D5E229500F14FB3 /* ProfileViewController.swift */,
-				4C689CB21E78443700B679D5 /* PersonCenterViewController.swift */,
-				4CC0F46B1EF2896E002AB97A /* SettingViewController.swift */,
-			);
-			path = "View(视图和控制器)";
-			sourceTree = "<group>";
-		};
-		3284F77A1D5E217800F14FB3 /* ViewModel(视图模型) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "ViewModel(视图模型)";
 			sourceTree = "<group>";
 		};
 		3284F7841D5E236800F14FB3 /* Controller */ = {
@@ -388,6 +362,35 @@
 				4C689BAC1E6DA5A400B679D5 /* VisitorView.swift */,
 			);
 			path = "View(视图和控制器)";
+			sourceTree = "<group>";
+		};
+		4C860C571EF3D6D300E429E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C860C5F1EF3D71400E429E4 /* ProfileHeadViewCell.swift */,
+				4C860C611EF3D72000E429E4 /* ProfileViewCell.swift */,
+			);
+			name = View;
+			path = ../../../../View;
+			sourceTree = "<group>";
+		};
+		4C860C581EF3D6D300E429E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C860C591EF3D6D300E429E4 /* SettingViewController.swift */,
+				4C860C5A1EF3D6D300E429E4 /* PersonCenterViewController.swift */,
+				4C860C5B1EF3D6D300E429E4 /* ProfileViewController.swift */,
+			);
+			name = Controller;
+			path = ../../../../Controller;
+			sourceTree = "<group>";
+		};
+		4C860C631EF3DC9E00E429E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C860C641EF3DCB200E429E4 /* ProfileModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4C99DCE81E5B3C1300D9C0A0 /* View */ = {
@@ -644,20 +647,23 @@
 				32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */,
 				3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */,
 				4CDDAC7B1E62814C00868E4A /* UIImageView+Extension.swift in Sources */,
+				4C860C5C1EF3D6D300E429E4 /* SettingViewController.swift in Sources */,
 				4CDDAC791E627F2E00868E4A /* WBVisitorView.swift in Sources */,
 				4CDDAC731E6278E500868E4A /* UIBarButtonItem+Extension.swift in Sources */,
 				4CDDAC831E628B1600868E4A /* WBComposeViewController.swift in Sources */,
 				4C99DCEE1E5B3D0500D9C0A0 /* Constant.swift in Sources */,
+				4C860C601EF3D71400E429E4 /* ProfileHeadViewCell.swift in Sources */,
 				3284F7881D5E238B00F14FB3 /* WBTabBarController.swift in Sources */,
 				4C689CAF1E76F63A00B679D5 /* UINavigationController+Extension.swift in Sources */,
+				4C860C651EF3DCB200E429E4 /* ProfileModel.swift in Sources */,
+				4C860C5D1EF3D6D300E429E4 /* PersonCenterViewController.swift in Sources */,
 				4C689BA31E62BB2300B679D5 /* WBBaseViewController.swift in Sources */,
-				4C689CB31E78443700B679D5 /* PersonCenterViewController.swift in Sources */,
 				3284F78A1D5E23A500F14FB3 /* WBNavigationController.swift in Sources */,
-				3284F7821D5E229500F14FB3 /* ProfileViewController.swift in Sources */,
+				4C860C5E1EF3D6D300E429E4 /* ProfileViewController.swift in Sources */,
 				3284F7801D5E227D00F14FB3 /* MessageViewController.swift in Sources */,
 				4CDDAC7D1E6282B700868E4A /* UILabel+Extension.swift in Sources */,
+				4C860C621EF3D72000E429E4 /* ProfileViewCell.swift in Sources */,
 				4CDDAC771E627ED100868E4A /* WBVisitorViewController.swift in Sources */,
-				4CC0F46C1EF2896E002AB97A /* SettingViewController.swift in Sources */,
 				4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */,
 				4C689CB11E76F6E800B679D5 /* UIViewController+Extension.swift in Sources */,
 				4C689BAD1E6DA5A400B679D5 /* VisitorView.swift in Sources */,

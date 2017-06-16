@@ -21,10 +21,6 @@ class SettingViewController: UIViewController {
         setupUI()
     }
     
-    @objc private func logoff() {
-        
-    }
-    
     fileprivate lazy var topLine: UIView = {
         let topLine = UIView()
         topLine.backgroundColor = RGB(r: 228, g: 228, b: 228)
@@ -98,7 +94,14 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-/// 设置UI
+/// MARK: - 监听事件
+extension SettingViewController {
+    @objc fileprivate func logoff() {
+        print("退出登录成功")
+    }
+}
+
+/// MARK: 设置UI
 extension SettingViewController {
     
     func setupUI() {
