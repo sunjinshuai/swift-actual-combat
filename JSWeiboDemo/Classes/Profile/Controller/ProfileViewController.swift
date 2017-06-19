@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
     
     fileprivate var listImageArr = [[""],["message_addfansgroup","message_addfansgroup"],["message_choosegroup","message_choosegroup","message_choosegroup"],["message_creatchat","message_creatchat"],["message_icon_group","message_icon_group"],["messagescenter_comments"],["messagescenter_groupchat_notice"]]
 
-    func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationItem()
@@ -30,32 +30,32 @@ class ProfileViewController: UIViewController {
 }
 
 /// MARK: UITableViewDataSource、UITableViewDelegate
-extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return listArr.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            return nil
-        } else {
-            return nil
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if section == 6 {
-            return 10
-        } else {
-            return 0.01
-        }
-    }
-}
+//extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
+//
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return listArr.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if indexPath.section == 0 {
+//            return nil
+//        } else {
+//            return nil
+//        }
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 10
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        if section == 6 {
+//            return 10
+//        } else {
+//            return 0.01
+//        }
+//    }
+//}
 
 /// MARK: - 监听事件
 extension ProfileViewController {
@@ -79,8 +79,8 @@ extension ProfileViewController {
     func setupTableView() {
         
         tableView = UITableView(frame: view.bounds, style: .grouped)
-        tableView?.delegate = self
-        tableView?.dataSource = self
+//        tableView?.delegate = self
+//        tableView?.dataSource = self
         view.insertSubview(tableView!, belowSubview: (self.navigationController?.navigationBar)!)
     }
 }
