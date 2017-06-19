@@ -8,19 +8,23 @@
 
 import UIKit
 
+private let identifier = "ProfileViewCell"
+private let headViewIdentifier = "ProfileHeadViewCell"
+
 class ProfileViewController: UIViewController {
     
     fileprivate var tableView: UITableView?
     
-    fileprivate var listArr = [[""],["新的好友","微博等级"],["我的相册","我的点评","我的赞"],["微博支付","微博运动"],["粉丝头条","粉丝服务"],["草稿箱"],["更多"]]
-    fileprivate var listExplainArr = [[""],["","连续登陆30天"],["","",""],["十元夺保时捷718","每天10000步，你达标了吗？"],["推广博文及账号的利器","橱窗，私信，营销"],[""],["文章，收藏"]]
+    fileprivate var listArr = [[""],["签到有礼","新的好友"],["我的相册","我的赞"],["微博钱包","微博运动","免流量"],["粉丝服务","粉丝头条"],["客服中心"],["草稿箱"]]
+    fileprivate var listExplainArr = [[""],["每日签到，红包多多",""],["","收藏，移到这里了"],["送钱！火力全开","全民热舞抢红包","刷微博、看视频"],["写文章、发点评、赚粉丝","推广博文及账号的利器"],[""],[""]]
     
-    fileprivate var listImageArr = [[""],["message_addfansgroup","message_addfansgroup"],["message_choosegroup","message_choosegroup","message_choosegroup"],["message_creatchat","message_creatchat"],["message_icon_group","message_icon_group"],["messagescenter_comments"],["messagescenter_groupchat_notice"]]
+    fileprivate var listImageArr = [[""],["message_drafts","message_addfansgroup"],["message_album","message_fabulous"],["message_wallet","message_motion","message_flow"],["message_fans","message_the_headlines"],["message_customer_service"],["message_drafts"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationItem()
+        setupTableView()
     }
     
     private func setupNavigationItem() {
@@ -30,32 +34,38 @@ class ProfileViewController: UIViewController {
 }
 
 /// MARK: UITableViewDataSource、UITableViewDelegate
-//extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return listArr.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.section == 0 {
-//            return nil
-//        } else {
-//            return nil
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 10
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        if section == 6 {
-//            return 10
-//        } else {
-//            return 0.01
-//        }
-//    }
-//}
+extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return listArr.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listArr[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: headViewIdentifier, for: indexPath)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 6 {
+            return 10
+        } else {
+            return 0.01
+        }
+    }
+}
 
 /// MARK: - 监听事件
 extension ProfileViewController {
@@ -79,8 +89,11 @@ extension ProfileViewController {
     func setupTableView() {
         
         tableView = UITableView(frame: view.bounds, style: .grouped)
-//        tableView?.delegate = self
-//        tableView?.dataSource = self
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        tableView?.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        tableView?.register(ProfileHeadViewCell.self, forCellReuseIdentifier: headViewIdentifier)
+        tableView?.register(ProfileViewCell.self, forCellReuseIdentifier: identifier)
         view.insertSubview(tableView!, belowSubview: (self.navigationController?.navigationBar)!)
     }
 }
