@@ -266,6 +266,7 @@
 		3284F7761D5E217800F14FB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4CC949391EF7E8550095B5D8 /* View */,
 				4CC9492E1EF7E5910095B5D8 /* Controller */,
 				4C860C631EF3DC9E00E429E4 /* Model */,
 			);
@@ -401,6 +402,13 @@
 				4CC949311EF7E5910095B5D8 /* ProfileViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4CC949391EF7E8550095B5D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4CDDAC7E1E628AFE00868E4A /* Compose */ = {
