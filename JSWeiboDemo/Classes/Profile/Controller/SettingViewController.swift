@@ -12,6 +12,8 @@ private let identifier = "UITableViewCell"
 
 class SettingViewController: UIViewController {
     
+    fileprivate var listArray = [["账号管理","账号与安全"],["消息设置","屏蔽设置","隐私设置","通用设置"],["清理缓存","意见反馈","客服中心","关于微博"]]
+    
     var tableView: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,7 @@ class SettingViewController: UIViewController {
 extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return listArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,7 +67,8 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        cell.textLabel?.text = "第\(indexPath.row)行"
+        let array = listArray[indexPath.section] as Array
+        cell.textLabel?.text = array[indexPath.row]
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
     }
