@@ -14,7 +14,6 @@ private let headViewIdentifier = "ProfileHeadViewCell"
 class ProfileViewController: UIViewController {
     
     fileprivate var tableView: UITableView?
-    
     fileprivate var listArray: Array<Any> = []
     
     override func viewDidLoad() {
@@ -35,11 +34,15 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return listArray.count
+        return listArray.count + 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (listArray[section] as AnyObject).count
+        if section == 0 {
+            return 1
+        } else {
+            return (listArray[section - 1] as! Array<Any>).count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,7 +50,9 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: headViewIdentifier, for: indexPath)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ProfileViewCell
+            let group = listArray[indexPath.section - 1] as! Array<Any>
+            cell.profileModel = group[indexPath.row] as? ProfileModel
             return cell
         }
     }

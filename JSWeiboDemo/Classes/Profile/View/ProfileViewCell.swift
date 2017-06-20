@@ -9,7 +9,18 @@
 import UIKit
 
 class ProfileViewCell: UITableViewCell {
-
+    
+    var profileModel: ProfileModel? {
+        didSet {
+            guard let profileModel = profileModel else {
+                return
+            }
+            avatarImageView.image = UIImage(named: profileModel.profile_image!)
+            titleLable.text = profileModel.profile_titleName
+            subTitleLable.text = profileModel.profile_subTitleName
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
