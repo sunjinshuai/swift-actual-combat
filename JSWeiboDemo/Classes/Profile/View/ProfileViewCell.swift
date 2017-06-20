@@ -95,7 +95,7 @@ class ProfileViewCell: UITableViewCell {
     
     fileprivate lazy var arrowImageView: UIImageView = {
         let arrowImageView = UIImageView()
-        arrowImageView.image = UIImage(named: "SignIn_arrow")
+        arrowImageView.image = UIImage(named: "profile_arrow")
         return arrowImageView
     }()
 }
