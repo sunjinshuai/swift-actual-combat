@@ -30,6 +30,7 @@
 		4CC949381EF7E5CD0095B5D8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC949311EF7E5910095B5D8 /* ProfileViewController.swift */; };
 		4CC9493C1EF7E90E0095B5D8 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9493B1EF7E90E0095B5D8 /* ProfileViewCell.swift */; };
 		4CC9493E1EF7E9200095B5D8 /* ProfileHeadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9493D1EF7E9200095B5D8 /* ProfileHeadViewCell.swift */; };
+		4CCDD1A71EF9204600F1EEAA /* ProfileHeadItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDD1A61EF9204600F1EEAA /* ProfileHeadItemView.swift */; };
 		4CDDAC731E6278E500868E4A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */; };
 		4CDDAC771E627ED100868E4A /* WBVisitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC761E627ED100868E4A /* WBVisitorViewController.swift */; };
 		4CDDAC791E627F2E00868E4A /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC781E627F2E00868E4A /* WBVisitorView.swift */; };
@@ -88,6 +89,7 @@
 		4CC949311EF7E5910095B5D8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4CC9493B1EF7E90E0095B5D8 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		4CC9493D1EF7E9200095B5D8 /* ProfileHeadViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeadViewCell.swift; sourceTree = "<group>"; };
+		4CCDD1A61EF9204600F1EEAA /* ProfileHeadItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeadItemView.swift; sourceTree = "<group>"; };
 		4CDDAC721E6278E500868E4A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		4CDDAC761E627ED100868E4A /* WBVisitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorViewController.swift; sourceTree = "<group>"; };
 		4CDDAC781E627F2E00868E4A /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 			children = (
 				4CC9493B1EF7E90E0095B5D8 /* ProfileViewCell.swift */,
 				4CC9493D1EF7E9200095B5D8 /* ProfileHeadViewCell.swift */,
+				4CCDD1A61EF9204600F1EEAA /* ProfileHeadItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				4CDDAC771E627ED100868E4A /* WBVisitorViewController.swift in Sources */,
 				4C99DCEA1E5B3C5500D9C0A0 /* WBTabBar.swift in Sources */,
 				4C689CB11E76F6E800B679D5 /* UIViewController+Extension.swift in Sources */,
+				4CCDD1A71EF9204600F1EEAA /* ProfileHeadItemView.swift in Sources */,
 				4C689BAD1E6DA5A400B679D5 /* VisitorView.swift in Sources */,
 				3284F77E1D5E226000F14FB3 /* HomeViewController.swift in Sources */,
 			);

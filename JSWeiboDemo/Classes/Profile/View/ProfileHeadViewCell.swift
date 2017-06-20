@@ -17,53 +17,9 @@ class ProfileHeadViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: UITableViewCellStyle.default, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = UITableViewCellSelectionStyle.none
         setupUI()
     }
-    
-    func setupUI() {
-        
-        addSubview(avatarImageView)
-        addSubview(titleLable)
-        addSubview(subTitleLable)
-        addSubview(arrowImageView)
-        addSubview(describeLable)
-        addSubview(splitLineView)
-        
-        avatarImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(15)
-            make.left.equalTo(15)
-            make.width.height.equalTo(60)
-        }
-        
-        titleLable.snp.makeConstraints { (make) in
-            make.left.equalTo(avatarImageView.snp.right).offset(10)
-            make.top.equalTo(avatarImageView.snp.top).offset(10)
-        }
-        
-        subTitleLable.snp.makeConstraints { (make) in
-            make.left.equalTo(avatarImageView.snp.right).offset(10)
-            make.top.equalTo(titleLable.snp.bottom).offset(5)
-        }
-        
-        arrowImageView.snp.makeConstraints { (make) in
-            make.centerY.equalTo(avatarImageView.snp.centerY)
-            make.right.equalTo(self).offset(-15)
-            make.height.equalTo(10)
-            make.width.equalTo(7)
-        }
-        
-        describeLable.snp.makeConstraints { (make) in
-            make.centerY.equalTo(avatarImageView.snp.centerY)
-            make.right.equalTo(arrowImageView.snp.left).offset(-5)
-        }
-        
-        splitLineView.snp.makeConstraints { (make) in
-            make.top.equalTo(avatarImageView.snp.bottom).offset(15)
-            make.left.right.equalTo(self)
-            make.height.equalTo(0.5)
-        }
-    }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -116,4 +72,99 @@ class ProfileHeadViewCell: UITableViewCell {
         splitLineView.backgroundColor = RGB(r: 221, g: 221, b: 221)
         return splitLineView
     }()
+    
+    fileprivate lazy var leftView: ProfileHeadItemView = {
+        let leftView = ProfileHeadItemView()
+        leftView.titleLable.text = "1362"
+        leftView.subTitleLable.text = "微博"
+        return leftView
+    }()
+    
+    fileprivate lazy var middleView: ProfileHeadItemView = {
+        let middleView = ProfileHeadItemView()
+        middleView.titleLable.text = "136"
+        middleView.subTitleLable.text = "关注"
+        return middleView
+    }()
+    
+    fileprivate lazy var rightView: ProfileHeadItemView = {
+        let rightView = ProfileHeadItemView()
+        rightView.titleLable.text = "362"
+        rightView.subTitleLable.text = "粉丝"
+        return rightView
+    }()
+}
+
+/// MARK: 设置UI
+extension ProfileHeadViewCell {
+    
+    func setupUI() {
+        
+        addSubview(avatarImageView)
+        addSubview(titleLable)
+        addSubview(subTitleLable)
+        addSubview(arrowImageView)
+        addSubview(describeLable)
+        addSubview(splitLineView)
+        addSubview(leftView)
+        addSubview(middleView)
+        addSubview(rightView)
+        
+        avatarImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(15)
+            make.left.equalTo(15)
+            make.width.height.equalTo(60)
+        }
+        
+        titleLable.snp.makeConstraints { (make) in
+            make.left.equalTo(avatarImageView.snp.right).offset(10)
+            make.top.equalTo(avatarImageView.snp.top).offset(10)
+        }
+        
+        subTitleLable.snp.makeConstraints { (make) in
+            make.left.equalTo(avatarImageView.snp.right).offset(10)
+            make.top.equalTo(titleLable.snp.bottom).offset(5)
+        }
+        
+        arrowImageView.snp.makeConstraints { (make) in
+            make.centerY.equalTo(avatarImageView.snp.centerY)
+            make.right.equalTo(self).offset(-15)
+            make.height.equalTo(10)
+            make.width.equalTo(7)
+        }
+        
+        describeLable.snp.makeConstraints { (make) in
+            make.centerY.equalTo(avatarImageView.snp.centerY)
+            make.right.equalTo(arrowImageView.snp.left).offset(-5)
+        }
+        
+        splitLineView.snp.makeConstraints { (make) in
+            make.top.equalTo(avatarImageView.snp.bottom).offset(15)
+            make.left.right.equalTo(self)
+            make.height.equalTo(0.5)
+        }
+        
+        middleView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.snp.centerX)
+            make.top.equalTo(splitLineView.snp.bottom).offset(5)
+            make.bottom.equalTo(self).offset(-10)
+            make.width.equalTo((UIScreen.main.bounds.size.width - 30) / 3)
+        }
+        
+        leftView.snp.makeConstraints { (make) in
+            make.top.equalTo(middleView)
+            make.left.equalTo(15)
+            make.right.equalTo(middleView.snp.left)
+            make.bottom.equalTo(middleView)
+            make.width.equalTo((UIScreen.main.bounds.size.width - 30) / 3)
+        }
+        
+        rightView.snp.makeConstraints { (make) in
+            make.top.equalTo(middleView)
+            make.bottom.equalTo(middleView)
+            make.right.equalTo(self).offset(-15)
+            make.left.equalTo(middleView.snp.right)
+            make.width.equalTo((UIScreen.main.bounds.size.width - 30) / 3)
+        }
+    }
 }

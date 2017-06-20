@@ -27,7 +27,7 @@ class ProfileViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: UITableViewCellStyle.default, reuseIdentifier: reuseIdentifier)
-        
+        self.selectionStyle = UITableViewCellSelectionStyle.none
         setupUI()
     }
     
@@ -37,9 +37,40 @@ class ProfileViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
+    
+    fileprivate lazy var avatarImageView: UIImageView = {
+        let avatarImageView = UIImageView()
+        avatarImageView.backgroundColor = UIColor.red
+        return avatarImageView
+    }()
+    
+    fileprivate lazy var titleLable: UILabel = {
+        let titleLable = UILabel()
+        titleLable.font = UIFont.systemFont(ofSize: 16)
+        titleLable.text = "我的相册"
+        return titleLable
+    }()
+    
+    fileprivate lazy var subTitleLable: UILabel = {
+        let subTitleLable = UILabel()
+        subTitleLable.font = UIFont.systemFont(ofSize: 12)
+        subTitleLable.textColor = UIColor.lightGray
+        subTitleLable.text = "全民热舞抢红包"
+        return subTitleLable
+    }()
+    
+    fileprivate lazy var arrowImageView: UIImageView = {
+        let arrowImageView = UIImageView()
+        arrowImageView.image = UIImage(named: "profile_arrow")
+        return arrowImageView
+    }()
+}
+
+/// MARK: 设置UI
+extension ProfileViewCell {
     
     func setupUI() {
         
@@ -71,31 +102,4 @@ class ProfileViewCell: UITableViewCell {
             make.width.equalTo(7)
         }
     }
-    
-    fileprivate lazy var avatarImageView: UIImageView = {
-        let avatarImageView = UIImageView()
-        avatarImageView.backgroundColor = UIColor.red
-        return avatarImageView
-    }()
-    
-    fileprivate lazy var titleLable: UILabel = {
-        let titleLable = UILabel()
-        titleLable.font = UIFont.systemFont(ofSize: 16)
-        titleLable.text = "我的相册"
-        return titleLable
-    }()
-    
-    fileprivate lazy var subTitleLable: UILabel = {
-        let subTitleLable = UILabel()
-        subTitleLable.font = UIFont.systemFont(ofSize: 12)
-        subTitleLable.textColor = UIColor.lightGray
-        subTitleLable.text = "全民热舞抢红包"
-        return subTitleLable
-    }()
-    
-    fileprivate lazy var arrowImageView: UIImageView = {
-        let arrowImageView = UIImageView()
-        arrowImageView.image = UIImage(named: "profile_arrow")
-        return arrowImageView
-    }()
 }
