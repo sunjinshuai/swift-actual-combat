@@ -82,8 +82,8 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
 extension ProfileViewController {
     
     @objc fileprivate func addFriend(){
-        let personCenter = PersonCenterViewController()
-        self.navigationController?.pushViewController(personCenter, animated: true)
+        let addFriends = AddFriendsViewController()
+        self.navigationController?.pushViewController(addFriends, animated: true)
         
     }
     

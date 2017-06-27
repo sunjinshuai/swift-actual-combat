@@ -37,6 +37,10 @@
 		4CDDAC7B1E62814C00868E4A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC7A1E62814C00868E4A /* UIImageView+Extension.swift */; };
 		4CDDAC7D1E6282B700868E4A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC7C1E6282B700868E4A /* UILabel+Extension.swift */; };
 		4CDDAC831E628B1600868E4A /* WBComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDAC821E628B1600868E4A /* WBComposeViewController.swift */; };
+		4CEA79E61F024D27002B85B9 /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA79E51F024D27002B85B9 /* AddFriendsViewController.swift */; };
+		4CEA79E81F024E7A002B85B9 /* AddFriendsStyle1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA79E71F024E7A002B85B9 /* AddFriendsStyle1ViewCell.swift */; };
+		4CEA79EA1F024E92002B85B9 /* AddFriendsStyle2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA79E91F024E92002B85B9 /* AddFriendsStyle2TableViewCell.swift */; };
+		4CEA79EC1F025DFD002B85B9 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA79EB1F025DFD002B85B9 /* UIButton+Extension.swift */; };
 		F9560E5FDCB91D66A3654B14 /* Pods_JSWeiboDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A3BA8CD604002EE3246FDF /* Pods_JSWeiboDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +100,10 @@
 		4CDDAC7A1E62814C00868E4A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		4CDDAC7C1E6282B700868E4A /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		4CDDAC821E628B1600868E4A /* WBComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeViewController.swift; sourceTree = "<group>"; };
+		4CEA79E51F024D27002B85B9 /* AddFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
+		4CEA79E71F024E7A002B85B9 /* AddFriendsStyle1ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsStyle1ViewCell.swift; sourceTree = "<group>"; };
+		4CEA79E91F024E92002B85B9 /* AddFriendsStyle2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsStyle2TableViewCell.swift; sourceTree = "<group>"; };
+		4CEA79EB1F025DFD002B85B9 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		637CB2ADA21B8E606826A9F7 /* Pods-JSWeiboDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSWeiboDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSWeiboDemo/Pods-JSWeiboDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -406,6 +414,7 @@
 				4CC9492F1EF7E5910095B5D8 /* SettingViewController.swift */,
 				4CC949301EF7E5910095B5D8 /* PersonCenterViewController.swift */,
 				4CC949311EF7E5910095B5D8 /* ProfileViewController.swift */,
+				4CEA79E51F024D27002B85B9 /* AddFriendsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +425,8 @@
 				4CC9493B1EF7E90E0095B5D8 /* ProfileViewCell.swift */,
 				4CC9493D1EF7E9200095B5D8 /* ProfileHeadViewCell.swift */,
 				4CCDD1A61EF9204600F1EEAA /* ProfileHeadItemView.swift */,
+				4CEA79E71F024E7A002B85B9 /* AddFriendsStyle1ViewCell.swift */,
+				4CEA79E91F024E92002B85B9 /* AddFriendsStyle2TableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +456,7 @@
 				4C689CAA1E76EFB400B679D5 /* UIColor+Extension.swift */,
 				4C689CAE1E76F63A00B679D5 /* UINavigationController+Extension.swift */,
 				4C689CB01E76F6E700B679D5 /* UIViewController+Extension.swift */,
+				4CEA79EB1F025DFD002B85B9 /* UIButton+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -643,12 +655,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CEA79EC1F025DFD002B85B9 /* UIButton+Extension.swift in Sources */,
+				4CEA79E81F024E7A002B85B9 /* AddFriendsStyle1ViewCell.swift in Sources */,
 				4CC949361EF7E5CD0095B5D8 /* SettingViewController.swift in Sources */,
 				4CC949371EF7E5CD0095B5D8 /* PersonCenterViewController.swift in Sources */,
 				4CC949381EF7E5CD0095B5D8 /* ProfileViewController.swift in Sources */,
 				4C689BA51E63097000B679D5 /* WBTempViewController.swift in Sources */,
+				4CEA79E61F024D27002B85B9 /* AddFriendsViewController.swift in Sources */,
 				4C689CAB1E76EFB400B679D5 /* UIColor+Extension.swift in Sources */,
 				32FA84DA1D5E18C600B0B698 /* AppDelegate.swift in Sources */,
+				4CEA79EA1F024E92002B85B9 /* AddFriendsStyle2TableViewCell.swift in Sources */,
 				4CC9493E1EF7E9200095B5D8 /* ProfileHeadViewCell.swift in Sources */,
 				3284F77C1D5E223D00F14FB3 /* DiscoverViewController.swift in Sources */,
 				4CDDAC7B1E62814C00868E4A /* UIImageView+Extension.swift in Sources */,
