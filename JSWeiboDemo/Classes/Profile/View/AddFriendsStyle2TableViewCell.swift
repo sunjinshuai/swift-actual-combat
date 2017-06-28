@@ -59,7 +59,7 @@ class AddFriendsStyle2TableViewCell: UITableViewCell {
         let followButton = UIButton()
         followButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         followButton.setTitleColor(UIColor.orange, for: UIControlState.normal)
-        followButton.set(image: UIImage(named: "card_icon_addtogroup"), title: "加关注", titlePosition: .top, additionalSpacing: 30.0, state: .normal)
+        followButton.set(image: UIImage(named: "card_icon_addtogroup"), title: "加关注", titlePosition: .bottom, additionalSpacing: 5.0, state: .normal)
         return followButton
     }()
     
