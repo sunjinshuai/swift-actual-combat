@@ -29,7 +29,7 @@ extension UIButton {
         var titleInsets: UIEdgeInsets
         var imageInsets: UIEdgeInsets
         
-        switch (position){
+        switch (position) {
         case .top:
             titleInsets = UIEdgeInsets(top: -((imageSize?.height)! + titleSize.height + spacing),
                                        left: -((imageSize?.width)!), bottom: 0, right: 0)

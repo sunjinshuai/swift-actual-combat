@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol ProfileHeadViewCellDelegate: NSObjectProtocol {
+    func profileHeadViewTouchToPersonCenter()
+}
+
 class ProfileHeadViewCell: UITableViewCell {
+    
+    var delegate: ProfileHeadViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,12 +33,12 @@ class ProfileHeadViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
     
-    fileprivate lazy var avatarImageView: UIImageView = {
-        let avatarImageView = UIImageView()
-        avatarImageView.image = UIImage(named: "avatar_default")
+    fileprivate lazy var avatarImageView: UIButton = {
+        let avatarImageView = UIButton(type: UIButtonType.custom)
+        avatarImageView.setBackgroundImage(UIImage(named: "avatar_default"), for: UIControlState.normal)
+        avatarImageView.addTarget(self, action: #selector(eventToPersonCenter), for: UIControlEvents.touchUpInside)
         avatarImageView.layer.cornerRadius = 30
         avatarImageView.layer.masksToBounds = true
         return avatarImageView
@@ -94,6 +100,15 @@ class ProfileHeadViewCell: UITableViewCell {
         return rightView
     }()
 }
+
+/// MARK: - 监听事件
+extension ProfileHeadViewCell {
+    
+    @objc fileprivate func eventToPersonCenter() {
+        delegate?.profileHeadViewTouchToPersonCenter()
+    }
+}
+
 
 /// MARK: 设置UI
 extension ProfileHeadViewCell {

@@ -47,7 +47,8 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: headViewIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: headViewIdentifier, for: indexPath) as! ProfileHeadViewCell
+            cell.delegate = self
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ProfileViewCell
@@ -78,13 +79,21 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+/// MARK: ProfileHeadViewCellDelegate
+extension ProfileViewController: ProfileHeadViewCellDelegate {
+    
+    func profileHeadViewTouchToPersonCenter() {
+        let personCenter = PersonCenterViewController()
+        self.navigationController?.pushViewController(personCenter, animated: true)
+    }
+}
+
 /// MARK: - 监听事件
 extension ProfileViewController {
     
     @objc fileprivate func addFriend(){
         let addFriends = AddFriendsViewController()
         self.navigationController?.pushViewController(addFriends, animated: true)
-        
     }
     
     @objc fileprivate func setting(){
