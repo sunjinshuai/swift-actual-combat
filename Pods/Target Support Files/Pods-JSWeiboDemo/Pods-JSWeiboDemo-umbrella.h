@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_JSWeiboDemoVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_JSWeiboDemoVersionString[];
+FOUNDATION_EXPORT double Pods_SwiftActualCombatVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SwiftActualCombatVersionString[];
 
