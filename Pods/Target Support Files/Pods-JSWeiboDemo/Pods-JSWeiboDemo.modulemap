@@ -1,5 +1,5 @@
-framework module Pods_JSWeiboDemo {
-  umbrella header "Pods-JSWeiboDemo-umbrella.h"
+framework module Pods_SwiftActualCombat {
+  umbrella header "Pods-SwiftActualCombat-umbrella.h"
 
   export *
   module * { export * }
