@@ -42,6 +42,7 @@
 		4C03CE7821FEA15100EE7FBF /* WBTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03CE5921FEA15100EE7FBF /* WBTempViewController.swift */; };
 		4C03CE7921FEA15100EE7FBF /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03CE5B21FEA15100EE7FBF /* WBTabBar.swift */; };
 		4C03CE7A21FEA15100EE7FBF /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03CE5C21FEA15100EE7FBF /* WBVisitorView.swift */; };
+		4C03CE7C21FEDB1C00EE7FBF /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03CE7B21FEDB1B00EE7FBF /* DispatchQueue+Extension.swift */; };
 		5B381703C8EA6936851EE49D /* Pods_Weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFB439CA48AE4AE66DF0947 /* Pods_Weibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		4C03CE5921FEA15100EE7FBF /* WBTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTempViewController.swift; sourceTree = "<group>"; };
 		4C03CE5B21FEA15100EE7FBF /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
 		4C03CE5C21FEA15100EE7FBF /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
+		4C03CE7B21FEDB1B00EE7FBF /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		7CEC383EC52BA78876E3D932 /* Pods-Weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weibo/Pods-Weibo.debug.xcconfig"; sourceTree = "<group>"; };
 		E571C3A3CE5DE7BD27C1464E /* Pods-Weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weibo/Pods-Weibo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +225,7 @@
 		4C03CE3821FEA15100EE7FBF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4C03CE7B21FEDB1B00EE7FBF /* DispatchQueue+Extension.swift */,
 				4C03CE3921FEA15100EE7FBF /* UIImageView+Extension.swift */,
 				4C03CE3A21FEA15100EE7FBF /* UIColor+Extension.swift */,
 				4C03CE3B21FEA15100EE7FBF /* UILabel+Extension.swift */,
@@ -492,6 +495,7 @@
 				4C03CE7421FEA15100EE7FBF /* WBVisitorViewController.swift in Sources */,
 				4C03CE7921FEA15100EE7FBF /* WBTabBar.swift in Sources */,
 				4C03CE6421FEA15100EE7FBF /* UIButton+Extension.swift in Sources */,
+				4C03CE7C21FEDB1C00EE7FBF /* DispatchQueue+Extension.swift in Sources */,
 				4C03CE6121FEA15100EE7FBF /* UIImageView+Extension.swift in Sources */,
 				4C03CE6F21FEA15100EE7FBF /* ProfileHeadViewCell.swift in Sources */,
 				4C03CE6C21FEA15100EE7FBF /* ProfileViewController.swift in Sources */,

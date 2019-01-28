@@ -10,7 +10,7 @@ import UIKit
 
 extension UILabel {
     
-    convenience init(fontSize: CGFloat, textColor: UIColor, text: String? = nil){
+    convenience init(fontSize: CGFloat, textColor: UIColor, text: String? = nil) {
         self.init()
         // 字体大小
         self.font = UIFont.systemFont(ofSize: fontSize)
@@ -19,5 +19,4 @@ extension UILabel {
         // 设置text
         self.text = text
     }
-    
 }

@@ -19,9 +19,8 @@ class PersonCenterViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        self.automaticallyAdjustsScrollViewInsets = false
-        self.navBarBackgroundColorAlpha = 0
         self.navBarTintColor = .white
+        self.navBarBgAlpha = 0
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -36,7 +35,6 @@ class PersonCenterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }
 
 /// MARK: UITableViewDataSource、UITableViewDelegate
@@ -80,22 +78,22 @@ extension PersonCenterViewController: UIScrollViewDelegate {
         let contentOffsetY = scrollView.contentOffset.y
         let showNavBarOffsetY = 200 - topLayoutGuide.length
         
-        // navigationBar alpha
+        //navigationBar alpha
         if contentOffsetY > showNavBarOffsetY  {
             var navAlpha = (contentOffsetY - (showNavBarOffsetY)) / 40.0
             if navAlpha > 1 {
                 navAlpha = 1
             }
-            navBarBackgroundColorAlpha = navAlpha
+            navBarBgAlpha = navAlpha
             if navAlpha > 0.8 {
-                navBarTintColor = UIColor.defaultNavBarTintColor()
+                navBarTintColor = UIColor.defaultNavBarTintColor
                 statusBarShouldLight = false
             } else {
                 navBarTintColor = UIColor.white
                 statusBarShouldLight = true
             }
         } else {
-            navBarBackgroundColorAlpha = 0
+            navBarBgAlpha = 0
             navBarTintColor = UIColor.white
             statusBarShouldLight = true
         }
@@ -119,6 +117,11 @@ extension PersonCenterViewController {
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        if #available(iOS 11.0, *) {
+            tableView?.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false;
+        }
         view.addSubview(tableView!)
     }
 }

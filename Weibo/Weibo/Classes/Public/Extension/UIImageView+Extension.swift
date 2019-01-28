@@ -13,7 +13,7 @@ extension UIImageView {
     /// UIImageView便利构造函数
     ///
     /// - Parameter imgName: 传入图片的名称
-    convenience init(imageName: String){
+    convenience init(imageName: String) {
         self.init(image: UIImage(named:imageName))
     }
 }
